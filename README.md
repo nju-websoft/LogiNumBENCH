@@ -1,6 +1,6 @@
 # LogiNumBench
 
-This repository serves as a generator for the LogiNumBench benchmark. Pre-generated examples can be found at [`datas`](./datas). Below, you will find a brief introduction to help you generate your own data.
+This repository serves as a generator for the LogiNumBench benchmark. Pre-generated examples can be found at [`data`](./data). Below, you will find a brief introduction to help you generate your own data.
 
 ## quick start
 
