@@ -168,26 +168,26 @@ python encoder_decoder_eva.py
 Please configure paths carefully in the files to suit your environment.
 
 + **ChatGLM3**: To call the API, please refer to the official repository for instructions on running the server.
-  + [chatglm3.py](baselines\llms\chatglm3\chatglm3.py)
-  + [chatglm3_base.py](baselines\llms\chatglm3\chatglm3_base.py)
+  + [chatglm3.py](baselines/llms/chatglm3/chatglm3.py)
+  + [chatglm3_base.py](baselines/llms/chatglm3/chatglm3_base.py)
 + **Llama2**: To call the API, please refer to the official repository for instructions on running the server.
-  + [llama2_chat.py](baselines\llms\llama2\llama2_chat.py)
-  + [llama2_text.py](baselines\llms\llama2\llama2_text.py)
+  + [llama2_chat.py](baselines/llms/llama2/llama2_chat.py)
+  + [llama2_text.py](baselines/llms/llama2/llama2_text.py)
 + **Llama3**
-  + [llama3_it.py](baselines\llms\llama3\llama3_it.py)
-  + [llama3_base.py](baselines\llms\llama3\llama3_base.py)
+  + [llama3_it.py](baselines/llms/llama3/llama3_it.py)
+  + [llama3_base.py](baselines/llms/llama3/llama3_base.py)
 + **Gemma**
-  + [gemma_it.py](baselines\llms\gemma\gemma_it.py)
-  + [gemma_base.py](baselines\llms\gemma\gemma_base.py)
+  + [gemma_it.py](baselines/llms/gemma/gemma_it.py)
+  + [gemma_base.py](baselines/llms/gemma/gemma_base.py)
 + **Qwen1\.5**
-  + [qwen_base.py](baselines\llms\qwen\qwen_base.py)
-  + [qwen_chat.py](baselines\llms\qwen\qwen_chat.py)
+  + [qwen_base.py](baselines/llms/qwen/qwen_base.py)
+  + [qwen_chat.py](baselines/llms/qwen/qwen_chat.py)
 + **ChatGPT**
-  + [chatgpt_call.py](baselines\llms\chatgpt\chatgpt_call.py)
+  + [chatgpt_call.py](baselines/llms/chatgpt/chatgpt_call.py)
 
 #### Pretraining
 
-+ [create_mix.py](baselines\pretrain\create_mix.py): The training set we used, with mixed depths, was collected from D1 to D5 for pre-training.
-+ [pretrain.py](baselines\pretrain\pretrain.py): Executes the pre-training.
-+ [RT_after_pretrain.py](baselines\pretrain\RT_after_pretrain.py): Fine-tunes on RuleTaker after pre-training.
-+ [train_on_RT.py](baselines\pretrain\train_on_RT.py): Directly fine-tunes on RuleTaker.
++ [create_mix.py](baselines/pretrain/create_mix.py): The training set we used, with mixed depths, was collected from D1 to D5 for pre-training.
++ [pretrain.py](baselines/pretrain/pretrain.py): Executes the pre-training.
++ [RT_after_pretrain.py](baselines/pretrain/RT_after_pretrain.py): Fine-tunes on RuleTaker after pre-training.
++ [train_on_RT.py](baselines/pretrain/train_on_RT.py): Directly fine-tunes on RuleTaker.
