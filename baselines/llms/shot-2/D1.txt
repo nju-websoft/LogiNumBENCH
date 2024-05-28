@@ -1,0 +1,44 @@
+Example 0:
+Fact:
+0. Mia is described as having 4 under the friendly attribute.
+1. The relationship chases holds between Samuel and Mia.
+2. Mia and James maintain a connection defined by chases.
+3. Under confident, Mia is characterized by the value 4.
+4. The relationship visits defines a connection between Mia and James.
+5. Under the relationship visits, Mia relates to Liam.
+Rule:
+0. The compassionate field in x is denoted by the value the attribute compassionate belonging to y with an addition of 4 can be safely inferred from x is in a state of chases with respect to y.
+1. Under compassionate, x is marked with 3 implies within x, the confident attribute is marked as 2.
+2. X is marked with 3 under the confident context is a foregone conclusion given the value 3 is assigned to x for the friendly field.
+3. Under furry, x is registered with 1 entails x is described by 4 within the confident context.
+4. If for x, confident is represented by 3 is met, then the value 4 is associated with compassionate for x necessarily follows.
+5. In terms of furry, x is characterized by augmenting the value held by y for attribute furry with 4 is a natural consequence of under the relationship hugs, x relates to y being true.
+Assertion:
+Mia's compassionate is greater than 8.
+Step reasoning:
+Default -> int0: James is 0 compassionate; Fact2 & Rule0 & int0 -> int1: Mia is 0+4=4 compassionate
+Answer:
+False
+
+Example 1:
+Fact:
+0. 2 is associated with Michael under the context in round.
+1. 1 is attributed to Alexander for the round attribute.
+2. William has 3 as the value of round.
+3. Grace is in a state of kisses with respect to William.
+4. The cold of Grace is 3.
+5. There is a relation hugs between Michael and William.
+Rule:
+0. The round field of x contains the value 4 is a direct result of 2 is associated with x for the white attribute.
+1. Whenever the hugs association is observed between x and y, the value adding the property denoted by white for y to 3 is logged for x under the white attribute.
+2. If 1 is documented for x within the friendly field, the value 1 is associated with x in the white context.
+3. If x has 4 as the value of cold is met, then the attribute round of x is assigned the value 3 necessarily follows.
+4. In light of under the friendly context, x holds the value 2, the round attribute of x holds the value 4 can be inferred.
+5. X is marked with intensifying the attribute friendly belonging to entity y by a factor of 2, subsequently adding 3 in the friendly field whenever in the context of sees, x and y share a connection.
+Assertion:
+Michael's white is less than 1.
+Step reasoning:
+Default -> int0: William is 0 white; Fact5 & Rule1 & int0 -> int1: Michael is 0+3=3 white
+Answer:
+False
+

@@ -1,0 +1,44 @@
+Example 0:
+Fact:
+0. The relationship greets holds between Joseph and Emily.
+1. Emily and Michael share a relationship denoted by likes.
+2. In the context of helps, Michael and Joseph share a connection.
+3. Joseph and Hannah maintain a connection defined by likes.
+4. The likes correlation is present between Hannah and Emily.
+5. It can be said that Hannah helps Michael.
+Rule:
+0. Under confident, x is described by the value the feature confident of y including 4 is a foregone conclusion given x and y form a relationship characterized by greets.
+1. Given the relationship likes holds between x and y, the compassionate of x is recorded as multiplying the value held by y for attribute compassionate by 4 and then adding 10 follows.
+2. Given within x, generous is identified as 1, the green property of x is annotated with 2 follows.
+3. The green field of x contains the value 4 gives rise to under the confident category, x is characterized by 1.
+4. Whenever x and y form a relationship characterized by helps holds, it follows that the generous property of x is identified with multiplying the value of generous for y by 2 with an addition of 6.
+5. X is documented with scaling the value corresponding to green within y by a factor of 4, then adding 3 under the green is a natural consequence of there is a relation likes between x and y being true.
+Assertion:
+Joseph's compassionate is greater than 94.
+Step reasoning:
+Default -> int0: Michael is 0 compassionate; Fact1 & Rule1 & int0 -> int1: Emily is 4*0+10=10 compassionate; Fact4 & Rule1 & int1 -> int2: Hannah is 4*10+10=50 compassionate; Fact3 & Rule1 & int2 -> int3: Joseph is 4*50+10=210 compassionate
+Answer:
+False
+
+Example 1:
+Fact:
+0. Daniel is in a state of greets with respect to Grace.
+1. There is a relation hugs between Dave and Benjamin.
+2. The relationship argues exists between Daniel and Grace.
+3. Benjamin argues Daniel.
+4. Grace is in a state of greets with respect to Dave.
+5. 1 is recorded for Grace in the nice attribute.
+Rule:
+0. The smart characteristic of x is indicated by intensifying the attribute smart belonging to entity y by a factor of 3 with an addition of 10 can be safely inferred from the relationship hugs holds between x and y.
+1. Given 3 is associated with nice for x, the smart field in x is identified as 2 follows.
+2. If under the relationship argues, x relates to y is fulfilled, then under the nice attribute, x holds multiplying the attribute nice belonging to y by 10 and subsequently adding 4 naturally follows suit.
+3. Under smart, x is represented by scaling the characteristic smart of y by 9 and then incorporating 1 is a foreseen outcome of the relationship argues exists between x and y.
+4. X is marked with 3 under the white context holds true if the smart field of x is marked as 3 is satisfied.
+5. Whenever the reserved field in x is denoted by the value 4 holds, it follows that the nice property of x is labeled as 1.
+Assertion:
+Dave's smart is greater than 42.
+Step reasoning:
+Default -> int0: Grace is 0 smart; Fact2 & Rule3 & int0 -> int1: Daniel is 9*0+1=1 smart; Fact3 & Rule3 & int1 -> int2: Benjamin is 9*1+1=10 smart; Fact1 & Rule0 & int2 -> int3: Dave is 3*10+10=40 smart
+Answer:
+False
+

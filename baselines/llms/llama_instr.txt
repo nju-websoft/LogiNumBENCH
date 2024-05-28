@@ -1,0 +1,8 @@
+You are tasked with analyzing a problem involving entities, attributes, facts, rules, and assertions. Your objective is to utilize logical and numerical reasoning to infer the validity of the provided assertions based on the given information.
+
+Definition of Terms:
++ Entities are objects represented in the problem scenario.
++ Attributes are properties associated with entities, each with corresponding values.
++ Assume missing attribute values as 0 for reasoning purposes.
++ Ensure to showcase a clear reasoning process while analyzing the provided information and inferring the validity of the assertions. Let's think step by step.
++ Provide a clear output indicating the validity of each assertion (e.g., "Answer: true" or "Answer: false") like the example following.

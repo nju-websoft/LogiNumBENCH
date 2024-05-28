@@ -1,0 +1,48 @@
+Example 0:
+Fact:
+0. In the context of needs, James and Erin share a connection.
+1. The cold property of Liam holds 4 as its value.
+2. The relationship kisses holds between Erin and Liam.
+3. Dave is in a state of helps with respect to James.
+4. Among Mia and Dave, the visits relationship exists.
+5. Mia's young is logged as 2.
+6. There is a relation helps between Liam and Mia.
+Rule:
+0. For x, the big field is attributed as taking the value associated with the attribute big of y and increasing it 7 times, then adding 3 is a direct result of x and y maintain a relationship as described by visits.
+1. The young property for x is depicted as 1 is a natural consequence of x's big is logged as 2 being true.
+2. The big attribute of x holds scaling the attribute big belonging to entity y by 10 and then incorporating 5 as its value can be deduced from the relationship needs defines the relationship between x and y.
+3. If in x, blue is registered as having the value 1 holds true, it follows that for x, big is documented with the value 1 is inevitable.
+4. Within x, the big field is populated with scaling the big attribute of y by a factor of 2, then adding 10 becomes certain upon satisfying in the context of helps, x and y share a connection.
+5. The young property of x is annotated with 4 is sufficient for x is documented with 4 under the compassionate category.
+6. If the compassionate property for x is depicted as 4, then the value 4 is documented for x within big.
+Assertion:
+Liam's big is less than 87.
+Step reasoning:
+Default -> int0: Erin is 0 big; Fact0 & Rule2 & int0 -> int1: James is 10*0+5=5 big; Fact3 & Rule4 & int1 -> int2: Dave is 2*5+10=20 big; Fact4 & Rule0 & int2 -> int3: Mia is 7*20+3=143 big; Fact6 & Rule4 & int3 -> int4: Liam is 2*143+10=296 big
+Answer:
+False
+
+Example 1:
+Fact:
+0. Charlie sees Chioe.
+1. Charlie and Chioe maintain a connection defined by kisses.
+2. Chioe is in a state of interacts with respect to Liam.
+3. There is a relation kisses between Liam and Hannah.
+4. In the context of sees, Hannah and Liam share a connection.
+5. The relationship sees defines a connection between Emily and Charlie.
+6. The relationship sees holds between Liam and Emily.
+Rule:
+0. X is designated with 4 in terms of round is a logical consequence of x is associated with 2 in terms of nice.
+1. If the relationship kisses holds between x and y, x is documented with augmenting the round attribute of y with 5 under the round category.
+2. Among x and y, the sees relationship exists entails multiplying the value held by y for attribute white by 2 and subsequently adding 5 is attributed to x under white.
+3. If within x, the friendly attribute is noted as 4, then the white attribute of x is associated with 1.
+4. X is identified with 3 under the round context entails within x, the compassionate attribute is set to 4.
+5. X is marked with adding 5 to the feature labeled quiet within y under the quiet attribute is a natural consequence of the interacts association is observed between x and y being true.
+6. Within x, white is identified with the value 1 is a foregone conclusion given in terms of x, round equals 4.
+Assertion:
+Hannah's white is less than 42.
+Step reasoning:
+Default -> int0: Chioe is 0 white; Fact0 & Rule2 & int0 -> int1: Charlie is 2*0+5=5 white; Fact5 & Rule2 & int1 -> int2: Emily is 2*5+5=15 white; Fact6 & Rule2 & int2 -> int3: Liam is 2*15+5=35 white; Fact4 & Rule2 & int3 -> int4: Hannah is 2*35+5=75 white
+Answer:
+True
+

@@ -1,0 +1,52 @@
+Example 0:
+Fact:
+0. Joseph and Fiona maintain a relationship as described by sees.
+1. Emily is documented with 3 under the label in cold.
+2. Fiona and Joseph maintain a connection defined by interacts.
+3. There exists a relationship sees between Gary and Emily.
+4. In Joseph, rough is registered as having 1.
+5. The helps association is observed between Emily and Gary.
+6. Joseph eats Gary.
+7. In the context of sees, Emily and Fiona share a connection.
+Rule:
+0. The cold attribute of x is annotated with augmenting the feature cold of y with 1 is a direct result of there is a relation interacts between x and y.
+1. The attribute rough for x holds the value scaling up the value of rough for y 2 times and then adding 3 can be deduced from the kisses link is observed between x and y.
+2. If x and y form a relationship characterized by sees is met, then the green of x is denoted by the value the attribute green belonging to entity y with an addition of 4 necessarily follows.
+3. Whenever x possesses 4 in the green attribute holds, it follows that within x, the big attribute is set to 4.
+4. The gruff attribute of x is annotated with scaling the value held by y for attribute gruff by 2, then appending 3 afterward is a direct result of x is in a state of interacts with respect to y.
+5. Within x, gruff is identified with the value 2 is sufficient for x is designated with 3 in terms of cold.
+6. The value intensifying the value of rough for y by a factor of 2, then adding 1 is ascribed to x for the rough attribute can be deduced from x and y share a relationship denoted by interacts.
+7. In terms of x, rough equals 3 implies the green property of x is labeled as 3.
+Assertion:
+Gary's big is greater than 4.
+Step reasoning:
+Fact4 -> int0: Joseph is 1 rough; Fact2 & Rule6 & int0 -> int1: Fiona is 2*1+1=3 rough; Rule7 & int1 -> int2: Fiona is 3 green; Fact7 & Rule2 & int2 -> int3: Emily is 3+4=7 green; Fact3 & Rule2 & int3 -> int4: Gary is 7+4=11 green; Rule3 & int4 -> int5: Gary is 4 big
+Answer:
+False
+
+Example 1:
+Fact:
+0. Hannah and James share a relationship denoted by chases.
+1. Fiona and Hannah maintain a connection defined by needs.
+2. James and Erin form a relationship characterized by needs.
+3. The value 3 is linked to Fiona in the green context.
+4. James is in a state of kisses with respect to Fiona.
+5. 2 is attributed to Grace under considerate.
+6. Fiona and Grace maintain a relationship as described by kisses.
+7. There is a relation kisses between Hannah and James.
+Rule:
+0. If within x, big is indicated by the value 2, then for x, the green field is labeled as 1.
+1. If among x and y, the interacts relationship exists, under furry, x is recorded with multiplying the value of furry for y by 2 and then adding 1.
+2. The furry property for x is depicted as 2 is a logical consequence of under blue, x is registered with 1.
+3. The considerate property of x is annotated with adding the property denoted by considerate for y to 1 is a logical consequence of x and y share a relationship denoted by kisses.
+4. For x, furry is documented with 1 whenever the blue property of x holds 4.
+5. X is marked with 1 under the friendly attribute is a direct result of within x, the considerate field is denoted as 2.
+6. Whenever the value 1 is associated with friendly for x, the value 1 is logged for x under the big attribute.
+7. The furry characteristic of x is represented by scaling the value assigned to attribute furry of y by 2 and then incorporating 3 is a logical consequence of the chases link is observed between x and y.
+Assertion:
+Hannah's big is greater than 10.
+Step reasoning:
+Fact5 -> int0: Grace is 2 considerate; Fact6 & Rule3 & int0 -> int1: Fiona is 2+1=3 considerate; Fact4 & Rule3 & int1 -> int2: James is 3+1=4 considerate; Fact7 & Rule3 & int2 -> int3: Hannah is 1+1=2 considerate; Rule5 & int3 -> int4: Hannah is 1 friendly; Rule6 & int4 -> int5: Hannah is 1 big
+Answer:
+False
+

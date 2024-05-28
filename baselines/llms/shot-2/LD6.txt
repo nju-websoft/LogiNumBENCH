@@ -1,0 +1,56 @@
+Example 0:
+Fact:
+0. Under the relationship greets, Harry relates to Michael.
+1. The relationship visits defines a connection between Daniel and Erin.
+2. Michael and Erin share a relationship denoted by chases.
+3. The argues link is observed between Daniel and Michael.
+4. Michael and Olivia maintain a relationship as described by argues.
+5. The relationship helps holds between Harry and Erin.
+6. There exists a relationship argues between Erin and Fiona.
+7. Olivia and Harry maintain a connection defined by argues.
+Rule:
+0. 4 is ascribed to x within the gruff context holds true if the value 3 is associated with considerate for x is satisfied.
+1. 4 is attributed to x under red entails x is characterized by 1 in terms of gruff.
+2. The gruff property of x is identified with 3 is sufficient for for x, the green field is labeled as 4.
+3. Within x, the green attribute holds the value 3 is a direct result of x is documented with 4 under the gruff category.
+4. X is described by scaling up the value of white for y 7 times with an addition of 4 within the white context is a foreseen outcome of among x and y, the helps relationship exists.
+5. The value taking the value corresponding to gruff within y and increasing it 4 times with an addition of 3 is marked against x under gruff is a foregone conclusion given the argues association is observed between x and y.
+6. X has 1 as the value of reserved holds true if x is associated with the value 1 for red is satisfied.
+7. X is described as having 4 under the white attribute entails x is described by 3 within the considerate context.
+8. If the reserved property of x is annotated with 2, then for x, red is documented as 4.
+9. In light of the white field in x is identified as 1, under x, the red property is manifested as 3 can be inferred.
+Assertion:
+Daniel's gruff is less than 2.
+Step reasoning:
+Default -> int0: Erin is 0 white; Fact5 & Rule4 & int0 -> int1: Harry is 7*0+4=4 white; Rule7 & int1 -> int2: Harry is 3 considerate; Rule0 & int2 -> int3: Harry is 4 gruff; Fact7 & Rule5 & int3 -> int4: Olivia is 4*4+3=19 gruff; Fact4 & Rule5 & int4 -> int5: Michael is 4*19+3=79 gruff; Fact3 & Rule5 & int5 -> int6: Daniel is 4*79+3=319 gruff
+Answer:
+False
+
+Example 1:
+Fact:
+0. In the context of interacts, Liam and Daniel share a connection.
+1. Emma and Alice maintain a connection defined by interacts.
+2. The relationship interacts holds between Daniel and Emma.
+3. It can be said that Liam needs Daniel.
+4. Alice and Olivia maintain a connection defined by likes.
+5. In the context of hugs, Benjamin and Olivia share a connection.
+6. Alice and Benjamin form a connection of the interacts relationship.
+7. The relationship needs exists between Liam and Benjamin.
+Rule:
+0. Given under the relationship interacts, x relates to y, the considerate field in x is denoted by the value taking the attribute considerate of entity y and increasing it 7 times with an addition of 3 follows.
+1. Under the reserved context, x is recorded with scaling up the value assigned to attribute reserved of y 10 times and then adding 4 is a logical consequence of the interacts link is observed between x and y.
+2. If under round, x is annotated with 1, then the value 4 is recorded for x within the considerate context.
+3. X is identified by amplifying the feature round of y by 8 and then including 1 in the round context can be deduced from in the context of hugs, x and y share a connection.
+4. The gruff property of x holds multiplying the property denoted by gruff for y by 2 with an addition of 10 can be safely inferred from x is in a state of hugs with respect to y.
+5. If under red, x holds the value 1 is met, then x is identified with 1 under the gruff context necessarily follows.
+6. For x, red is defined by 3 is a foreseen outcome of 1 is recorded for x in the white attribute.
+7. 1 is stored in the reserved field for x is a natural consequence of the red attribute of x is associated with 3 being true.
+8. X is defined by scaling up the rough property of y 3 times with an addition of 2 in the rough field is a natural consequence of there exists a relationship chases between x and y being true.
+9. In x, gruff is registered as having 3 guarantees under red, x is recorded with 3.
+Assertion:
+Liam's considerate is less than 59.
+Step reasoning:
+Default -> int0: Olivia is 0 round; Fact5 & Rule3 & int0 -> int1: Benjamin is 8*0+1=1 round; Rule2 & int1 -> int2: Benjamin is 4 considerate; Fact6 & Rule0 & int2 -> int3: Alice is 7*4+3=31 considerate; Fact1 & Rule0 & int3 -> int4: Emma is 7*31+3=220 considerate; Fact2 & Rule0 & int4 -> int5: Daniel is 7*220+3=1543 considerate; Fact0 & Rule0 & int5 -> int6: Liam is 7*1543+3=10804 considerate
+Answer:
+False
+

@@ -1,0 +1,52 @@
+Example 0:
+Fact:
+0. The argues correlation is present between Chioe and Emily.
+1. Mia and Emily form a connection of the helps relationship.
+2. The relationship likes defines the relationship between Mia and Samuel.
+3. The kisses link is observed between Alexander and Chioe.
+4. The relationship argues holds between Chioe and Alexander.
+5. The likes association is observed between Samuel and Chioe.
+6. In the context of helps, Mia and Chioe share a connection.
+7. The relationship kisses defines the relationship between Chioe and Emily.
+Rule:
+0. For x, the value 2 is assigned to blue is a direct result of within x, furry is identified with the value 2.
+1. Once x is identified with 2 under the smart category is met, then the value 3 is attributed to quiet for x necessarily follows.
+2. The value 1 is attributed to smart for x is sufficient for the value 2 is assigned to x under quiet.
+3. Whenever the likes association is observed between x and y, x holds scaling the feature labeled confident within y by 2 and then incorporating 8 under the attribute confident.
+4. If the interacts association is observed between x and y is met, then for x, young is represented by scaling the characteristic young of y by a factor of 6, subsequently adding 9 necessarily follows.
+5. The kisses link is observed between x and y guarantees the quiet attribute of x is set to multiplying the property denoted by quiet for y by 2 and then adding 1.
+6. X is characterized by 2 within the confident field is a natural consequence of 4 is recorded for x in the context of furry being true.
+7. The furry field of x is denoted with 4 is a logical consequence of the quiet attribute of x is depicted by 1.
+Assertion:
+Mia's confident is less than 6.
+Step reasoning:
+Default -> int0: Emily is 0 quiet; Fact7 & Rule5 & int0 -> int1: Chioe is 2*0+1=1 quiet; Rule7 & int1 -> int2: Chioe is 4 furry; Rule6 & int2 -> int3: Chioe is 2 confident; Fact5 & Rule3 & int3 -> int4: Samuel is 2*2+8=12 confident; Fact2 & Rule3 & int4 -> int5: Mia is 2*12+8=32 confident
+Answer:
+False
+
+Example 1:
+Fact:
+0. In the context of hugs, Dave and Daniel share a connection.
+1. The relationship hugs defines the relationship between Dave and Chioe.
+2. Charlie eats Chioe.
+3. 1 is attributed to Dave under smart.
+4. Chioe and Dave form a connection of the helps relationship.
+5. The helps correlation is present between Daniel and Charlie.
+6. Charlie and Chioe form a relationship characterized by needs.
+7. The relationship helps defines the relationship between Dave and Hannah.
+Rule:
+0. Once x helps y is met, then taking y's red and increasing it 9 times, then adding 3 is documented for x within the red property necessarily follows.
+1. Given the red characteristic of x is attributed to 3, x's reserved is num follows.
+2. The red attribute of x is set to 1 leads to within x, the reserved attribute is represented by 1.
+3. 2 is linked to x under the nice attribute is a foregone conclusion given 4 is recorded for x in the context of smart.
+4. Under red, x is documented with intensifying the attribute red of entity y by a factor of 9, then adding 5 is a natural consequence of the needs correlation is present between x and y being true.
+5. X has 5 times the value of the attribute nice belonging to y, then adding 2 as the value of nice is a foregone conclusion given the relationship helps exists between x and y.
+6. In terms of generous, x is characterized by 1 implies x is documented with 3 under the nice label.
+7. Within x, the smart field is set to 2 whenever the nice field of x is marked by 3.
+Assertion:
+Daniel's reserved is less than 70.
+Step reasoning:
+Default -> int0: Hannah is 0 red; Fact7 & Rule0 & int0 -> int1: Dave is 9*0+3=3 red; Fact4 & Rule0 & int1 -> int2: Chioe is 9*3+3=30 red; Fact6 & Rule4 & int2 -> int3: Charlie is 9*3+5=32 red; Fact5 & Rule0 & int3 -> int4: Daniel is 9*32+3=291 red; Rule1 & int4 -> int5: Daniel is 2 reserved
+Answer:
+True
+

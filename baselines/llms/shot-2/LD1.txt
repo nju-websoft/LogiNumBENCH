@@ -1,0 +1,44 @@
+Example 0:
+Fact:
+0. Sophia and Emma form a connection of the chases relationship.
+1. The relationship chases defines the relationship between Emma and Erin.
+2. Erin hugs Amelia.
+3. It can be said that Erin kisses Amelia.
+4. The relationship kisses holds between Sophia and Amelia.
+5. The relationship hugs defines a connection between Sophia and Amelia.
+Rule:
+0. X and y maintain a connection defined by hugs gives rise to under green, x is designated with scaling the value assigned to attribute green of y by a factor of 9, then adding 6.
+1. Under generous, x is noted as having the generous property of y plus 10 is a natural consequence of under the relationship kisses, x relates to y being true.
+2. If x and y maintain a relationship as described by hugs, within x, blue is recorded as multiplying the value corresponding to blue within y by 2 and then adding 6.
+3. If the generous property for x is given by 1 is met, then under the green context, x holds 1 necessarily follows.
+4. Whenever x and y form a relationship characterized by chases, for x, the value amplifying the value corresponding to cold within y by 7 and then including 7 is assigned to cold.
+5. If within x, the cold attribute is set to 4 is met, then for x, blue is identified as 4 necessarily follows.
+Assertion:
+Erin's blue is less than 93.
+Step reasoning:
+Default -> int0: Amelia is 0 blue; Fact2 & Rule2 & int0 -> int1: Erin is 2*0+6=6 blue
+Answer:
+True
+
+Example 1:
+Fact:
+0. Liam is in a state of argues with respect to Amelia.
+1. The relationship sees holds between Amelia and Fiona.
+2. Amelia is in a state of visits with respect to Fiona.
+3. The relationship argues defines the relationship between Dave and Amelia.
+4. The visits correlation is present between Liam and Fiona.
+5. Dave and Liam maintain a relationship as described by argues.
+Rule:
+0. X is described by 3 within the compassionate context holds true if the young characteristic of x is attributed to 2 is satisfied.
+1. Within x, friendly is indicated by the value multiplying the attribute friendly belonging to entity y by 5 with an addition of 6 is a direct result of x and y maintain a connection defined by sees.
+2. The value 3 is associated with x under young is a foregone conclusion given the big field of x is characterized by 1.
+3. Whenever the young property for x is given by 1 holds, it follows that the friendly attribute of x is annotated with 1.
+4. If the young property for x is depicted as 4, then x has 2 as the value of compassionate.
+5. The compassionate of x is 4 is sufficient for x's big is stored as 2.
+Assertion:
+Amelia's friendly is less than 39.
+Step reasoning:
+Default -> int0: Fiona is 0 friendly; Fact1 & Rule1 & int0 -> int1: Amelia is 5*0+6=6 friendly
+Answer:
+True
+

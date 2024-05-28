@@ -1,0 +1,44 @@
+Example 0:
+Fact:
+0. The relationship kisses defines a connection between Mia and James.
+1. In the context of interacts, James and Mia share a connection.
+2. Alice and James form a connection of the interacts relationship.
+3. There exists a relationship kisses between Alice and Hannah.
+4. Among Mia and Alice, the kisses relationship exists.
+5. James and Alice maintain a connection defined by kisses.
+Rule:
+0. 4 is attributed to x in the smart property guarantees within x, round is identified with the value 2.
+1. In the context of quiet, x holds 1 is sufficient for within x, the smart attribute is characterized by 4.
+2. The smart characteristic of x is indicated by 4 can be deduced from the big field of x is associated with 3.
+3. Within x, the round attribute is logged as 1 is sufficient for the big property for x is depicted as 3.
+4. The quiet property for x is characterized by augmenting the value associated with the attribute quiet of y with 1 is a foregone conclusion given x interacts y.
+5. Under big, x is characterized by the value scaling up the characteristic big of y 2 times with an addition of 1 is a natural consequence of x and y form a connection of the chases relationship being true.
+Assertion:
+Alice's quiet is less than 1.
+Step reasoning:
+Default -> int0: Mia is 0 quiet; Fact1 & Rule4 & int0 -> int1: James is 0+1=1 quiet; Fact2 & Rule4 & int1 -> int2: Alice is 1+1=2 quiet
+Answer:
+False
+
+Example 1:
+Fact:
+0. It can be said that Emma visits Gary.
+1. The relationship interacts defines a connection between Benjamin and Amelia.
+2. Among Emma and Benjamin, the visits relationship exists.
+3. The chases link is observed between Gary and Emma.
+4. Benjamin and Gary maintain a connection defined by visits.
+5. Gary and Amelia maintain a connection defined by chases.
+Rule:
+0. 4 is identified with x under red gives rise to x is characterized by 4 within the big field.
+1. Under the red category, x holds the value 1 whenever the smart field in x is recorded as 1.
+2. For x, the quiet field is attributed as 2 entails 3 is recorded for x in the red attribute.
+3. X is designated with the value associated with the attribute red of y with an addition of 4 in terms of red becomes certain upon satisfying the interacts link is observed between x and y.
+4. In terms of big, x is characterized by 1 can be deduced from 2 is attributed to x for red.
+5. Within x, the red attribute is noted as 4 is a logical consequence of the smart attribute of x corresponds to 3.
+Assertion:
+Benjamin's big is greater than 10.
+Step reasoning:
+Default -> int0: Amelia is 0 red; Fact1 & Rule3 & int0 -> int1: Benjamin is 0+4=4 red; Rule0 & int1 -> int2: Benjamin is 4 big
+Answer:
+False
+

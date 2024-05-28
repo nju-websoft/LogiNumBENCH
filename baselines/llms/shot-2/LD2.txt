@@ -1,0 +1,44 @@
+Example 0:
+Fact:
+0. Among Emma and Sophia, the hugs relationship exists.
+1. Sophia is in a state of hugs with respect to Gary.
+2. The meets association is observed between Sophia and James.
+3. The meets correlation is present between Sophia and Gary.
+4. Under the relationship likes, Emma relates to James.
+5. It can be said that Gary hugs James.
+Rule:
+0. Given in x, quiet is registered as having 3, within x, the reserved property is assigned 3 follows.
+1. The smart property for x is characterized by 2 is a foregone conclusion given the big attribute of x is associated with 4.
+2. For x, the quiet field is attributed as 1 whenever x is characterized by 4 in the smart context.
+3. Whenever the relationship hugs holds between x and y holds, it follows that the value intensifying the value associated with the attribute quiet of y by a factor of 8, then adding 5 is associated with quiet for x.
+4. Under big, x is documented with the value 3 times the value of the big property of y, then adding 9 is a logical consequence of the hugs association is observed between x and y.
+5. If the relationship hugs defines the relationship between x and y is met, then under smart, x is represented by scaling up the value of smart for y 6 times with an addition of 3 necessarily follows.
+Assertion:
+Sophia's smart is greater than 78.
+Step reasoning:
+Default -> int0: James is 0 smart; Fact5 & Rule5 & int0 -> int1: Gary is 6*0+3=3 smart; Fact1 & Rule5 & int1 -> int2: Sophia is 6*3+3=21 smart
+Answer:
+False
+
+Example 1:
+Fact:
+0. The chases link is observed between Samuel and Joseph.
+1. Erin and Joseph form a relationship characterized by interacts.
+2. Among Samuel and Joseph, the interacts relationship exists.
+3. Under the relationship interacts, Dave relates to Erin.
+4. Joseph and Samuel maintain a connection defined by kisses.
+5. The considerate field of Erin contains the value 1.
+Rule:
+0. Once x is marked with 2 for green is met, then under x, the rough property is manifested as 3 necessarily follows.
+1. The considerate field in x is recorded as 3 becomes certain upon satisfying x is marked with 2 in the blue field.
+2. For x, considerate is documented with the value 2 gives rise to for x, blue is identified as 1.
+3. If in the context of kisses, x and y share a connection is met, then the attribute blue of x is assigned the value scaling the attribute blue belonging to entity y by 8, then appending 10 afterward necessarily follows.
+4. The blue property of x is defined as 4 gives rise to within x, green is documented as 3.
+5. Under the green context, x holds multiplying the value corresponding to green within y by 6 and then adding 1 holds true if the relationship interacts defines the relationship between x and y is satisfied.
+Assertion:
+Dave's green is greater than 51.
+Step reasoning:
+Default -> int0: Joseph is 0 green; Fact1 & Rule5 & int0 -> int1: Erin is 6*0+1=1 green; Fact3 & Rule5 & int1 -> int2: Dave is 6*1+1=7 green
+Answer:
+False
+

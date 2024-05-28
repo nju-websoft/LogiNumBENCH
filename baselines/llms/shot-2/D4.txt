@@ -1,0 +1,48 @@
+Example 0:
+Fact:
+0. Bob and William form a relationship characterized by helps.
+1. The needs association is observed between William and Bob.
+2. Daniel is in a state of needs with respect to William.
+3. Daniel and Sophia form a connection of the greets relationship.
+4. Among William and Daniel, the helps relationship exists.
+5. Sophia is characterized by 2 within the green field.
+6. Under the relationship chases, William relates to Erin.
+Rule:
+0. If the helps correlation is present between x and y is met, then within x, the smart attribute is noted as intensifying the value associated with the attribute smart of y 2 times, then appending 2 necessarily follows.
+1. If within x, the smart attribute holds the value 2, then x is documented with 1 under the green.
+2. Under generous, x is noted as having augmenting property generous of y with 3 becomes certain upon satisfying x and y form a connection of the helps relationship.
+3. For x, the nice field is attributed as 4 whenever for x, the green field is labeled as 2.
+4. The considerate property for x is defined as 2 entails 4 is assigned to compassionate for x.
+5. Once the nice attribute of x is annotated with 3 is met, then x has 4 as the value of smart necessarily follows.
+6. The value expanding property nice of y 2 times, then appending 1 is linked to x in the nice context is a direct result of among x and y, the needs relationship exists.
+Assertion:
+William's smart is greater than 1.
+Step reasoning:
+Default -> int0: Bob is 0 nice; Fact1 & Rule6 & int0 -> int1: William is 2*0+1=1 nice; Fact2 & Rule6 & int1 -> int2: Daniel is 2*1+1=3 nice; Rule5 & int2 -> int3: Daniel is 4 smart; Fact4 & Rule0 & int3 -> int4: William is 2*4+2=10 smart
+Answer:
+True
+
+Example 1:
+Fact:
+0. Mia and Sophia form a connection of the needs relationship.
+1. Fiona and Dave form a connection of the kisses relationship.
+2. The relationship sees defines a connection between Alice and Fiona.
+3. 1 is attributed to Dave in the nice property.
+4. Within Alice, gruff is marked with 1.
+5. Sophia and Dave form a connection of the interacts relationship.
+6. The relationship sees exists between Fiona and Mia.
+Rule:
+0. Given in the context of sees, x and y share a connection, for x, big is identified as adding 3 to 2 times the quantity of the big property of y follows.
+1. If in the context of kisses, x and y share a connection is fulfilled, then the generous attribute of x corresponds to the value intensifying the characteristic generous of y 2 times, then appending 2 naturally follows suit.
+2. X is associated with 1 in terms of big is a foregone conclusion given 2 is attributed to x for kind.
+3. If 2 is associated with x under the context in gruff, then for x, nice is documented as 2.
+4. X is described by property kind of y including 2 within the kind context is a logical consequence of there exists a relationship needs between x and y.
+5. For x, the nice field is attributed as 3 is a direct result of 1 is attributed to x for big.
+6. X and y form a relationship characterized by kisses leads to the nice characteristic of x is attributed to scaling the property denoted by nice for y by 2 and then incorporating 3.
+Assertion:
+Alice's big is less than 6.
+Step reasoning:
+Default -> int0: Sophia is 0 kind; Fact0 & Rule4 & int0 -> int1: Mia is 0+2=2 kind; Rule2 & int1 -> int2: Mia is 1 big; Fact6 & Rule0 & int2 -> int3: Fiona is 2*1+3=5 big; Fact2 & Rule0 & int3 -> int4: Alice is 2*5+3=13 big
+Answer:
+False
+
