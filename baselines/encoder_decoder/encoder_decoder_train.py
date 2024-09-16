@@ -1,4 +1,18 @@
+from transformers import DataCollatorForSeq2Seq
+from transformers import Seq2SeqTrainer, Seq2SeqTrainingArguments, EarlyStoppingCallback
+from nltk.tokenize import sent_tokenize
+import numpy as np
+import nltk
+import evaluate
+from transformers import AutoModelForSeq2SeqLM
+import pandas as pd
+import torch
+from transformers import AutoTokenizer
+from datasets import load_dataset, DatasetDict, load_from_disk
+import os
 import sys
+
+
 def parse_arguments(args):
     parsed_args = {}
     for arg in args[1:]:
@@ -11,16 +25,10 @@ def parse_arguments(args):
             raise ValueError("args parsing fault {0}".format(arg))
     return parsed_args
 
-# gpu, ckpt, dataFile, storeFile, batchsz, lr
-# 获取命令行参数
+
 args = parse_arguments(sys.argv)
 
-import os
 os.environ['CUDA_VISIBLE_DEVICES'] = args['gpu']
-from datasets import load_dataset, DatasetDict, load_from_disk
-from transformers import AutoTokenizer
-import torch
-import pandas as pd
 checkpoint = args['ckpt']
 predata_file = args['dataFile']
 prestore_file = args['storeFile']+'/tokenized_data'
@@ -30,25 +38,31 @@ tokenizer = AutoTokenizer.from_pretrained(checkpoint)
 
 def load_preprocess_data(data_file, store_file):
     raw = load_from_disk(data_file)
-    raw = raw.map(lambda s: {'inputs': s["facts_nl"]+s["rules_nl"]+s["assertion_nl"], 'targets':s['str_reason']+s['answer']})
+    raw = raw.map(lambda s: {'inputs': s["facts_nl"]+s["rules_nl"] +
+                  s["assertion_nl"], 'targets': s['str_reason']+s['answer']})
     columns_to_keep = ["targets", 'inputs']
-    raw = raw.remove_columns([col for col in list(raw['train'].features.keys()) if col not in columns_to_keep])
+    raw = raw.remove_columns([col for col in list(
+        raw['train'].features.keys()) if col not in columns_to_keep])
 
-    tokenized_inputs = raw.map(lambda x: tokenizer(x["inputs"], truncation=True), batched=True, remove_columns=["inputs", "targets"])
-    max_source_length = max([len(x) for x in tokenized_inputs['train']["input_ids"]])
-    tokenized_targets = raw.map(lambda x: tokenizer(x["targets"], truncation=True), batched=True, remove_columns=["inputs", "targets"])
-    max_target_length = max([len(x) for x in tokenized_targets['train']["input_ids"]])
+    tokenized_inputs = raw.map(lambda x: tokenizer(
+        x["inputs"], truncation=True), batched=True, remove_columns=["inputs", "targets"])
+    max_source_length = max([len(x)
+                            for x in tokenized_inputs['train']["input_ids"]])
+    tokenized_targets = raw.map(lambda x: tokenizer(
+        x["targets"], truncation=True), batched=True, remove_columns=["inputs", "targets"])
+    max_target_length = max([len(x)
+                            for x in tokenized_targets['train']["input_ids"]])
 
     print(f"dataset size: {len(raw['train'])}")
     print(f"Max source length: {max_source_length}")
     print(f"Max target length: {max_target_length}")
 
-    def preprocess_function(sample,padding="max_length"):
-        model_inputs = tokenizer(sample["inputs"], max_length=max_source_length, padding=padding, truncation=True)
-        labels = tokenizer(text_target=sample["targets"], max_length=max_target_length, padding=padding, truncation=True)
+    def preprocess_function(sample, padding="max_length"):
+        model_inputs = tokenizer(
+            sample["inputs"], max_length=max_source_length, padding=padding, truncation=True)
+        labels = tokenizer(
+            text_target=sample["targets"], max_length=max_target_length, padding=padding, truncation=True)
 
-        # If we are padding here, replace all tokenizer.pad_token_id in the labels by -100 when we want to ignore
-        # padding in the loss.
         if padding == "max_length":
             labels["input_ids"] = [
                 [(l if l != tokenizer.pad_token_id else -100) for l in label] for label in labels["input_ids"]
@@ -57,22 +71,22 @@ def load_preprocess_data(data_file, store_file):
         model_inputs["labels"] = labels["input_ids"]
         return model_inputs
 
-    tokenized_dataset = raw.map(preprocess_function, batched=True, remove_columns=["inputs", "targets"])
-    print(f"Keys of tokenized dataset: {list(tokenized_dataset['train'].features)}")
+    tokenized_dataset = raw.map(
+        preprocess_function, batched=True, remove_columns=["inputs", "targets"])
+    print(
+        f"Keys of tokenized dataset: {list(tokenized_dataset['train'].features)}")
     tokenized_dataset.save_to_disk(store_file)
 
+
 # train
-from transformers import AutoModelForSeq2SeqLM
 model = AutoModelForSeq2SeqLM.from_pretrained(checkpoint)
 
-import evaluate
-import nltk
-import numpy as np
-from nltk.tokenize import sent_tokenize
 nltk.download("punkt")
 metric = evaluate.load("rouge")
 
 # helper function to postprocess text
+
+
 def postprocess_text(preds, labels):
     preds = [pred.strip() for pred in preds]
     labels = [label.strip() for label in labels]
@@ -82,6 +96,7 @@ def postprocess_text(preds, labels):
     labels = ["\n".join(sent_tokenize(label)) for label in labels]
 
     return preds, labels
+
 
 def compute_metrics(eval_preds):
     preds, labels = eval_preds
@@ -93,15 +108,17 @@ def compute_metrics(eval_preds):
     decoded_labels = tokenizer.batch_decode(labels, skip_special_tokens=True)
 
     # Some simple post-processing
-    decoded_preds, decoded_labels = postprocess_text(decoded_preds, decoded_labels)
+    decoded_preds, decoded_labels = postprocess_text(
+        decoded_preds, decoded_labels)
 
-    result = metric.compute(predictions=decoded_preds, references=decoded_labels, use_stemmer=True)
+    result = metric.compute(predictions=decoded_preds,
+                            references=decoded_labels, use_stemmer=True)
     result = {k: round(v * 100, 4) for k, v in result.items()}
-    prediction_lens = [np.count_nonzero(pred != tokenizer.pad_token_id) for pred in preds]
+    prediction_lens = [np.count_nonzero(
+        pred != tokenizer.pad_token_id) for pred in preds]
     result["gen_len"] = np.mean(prediction_lens)
     return result
 
-from transformers import DataCollatorForSeq2Seq
 
 # we want to ignore tokenizer pad token in the loss
 label_pad_token_id = -100
@@ -113,9 +130,9 @@ data_collator = DataCollatorForSeq2Seq(
     pad_to_multiple_of=8
 )
 
-from transformers import Seq2SeqTrainer, Seq2SeqTrainingArguments, EarlyStoppingCallback
 
 # Define training args
+
 def do_training(store_file, level):
     batchsz = int(args['batchsz'])
     training_args = Seq2SeqTrainingArguments(
@@ -123,7 +140,7 @@ def do_training(store_file, level):
         per_device_train_batch_size=batchsz,
         per_device_eval_batch_size=batchsz,
         predict_with_generate=True,
-        fp16=False, # Overflows with fp16
+        fp16=False,  # Overflows with fp16
         learning_rate=float(args['lr']),
         num_train_epochs=1000,
         evaluation_strategy="epoch",
@@ -137,7 +154,7 @@ def do_training(store_file, level):
         early_stopping_patience=5,  # Number of evaluations with no improvement before stopping
         early_stopping_threshold=0.0001,  # Minimum improvement in the monitored metric
     )
-    
+
     tokenized_datasets = load_from_disk(store_file)
     # Create Trainer instance
     trainer = Seq2SeqTrainer(
@@ -152,7 +169,7 @@ def do_training(store_file, level):
     )
 
     trainer.train()
-    
+
 
 for depth in range(6, 7):
     data_file = predata_file.format(depth=depth)

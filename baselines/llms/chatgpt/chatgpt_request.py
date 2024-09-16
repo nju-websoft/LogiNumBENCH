@@ -41,8 +41,7 @@ def chatgpt_request(api_key, prompt, instr):
             openai.api_key = api_key
 
             response = openai.ChatCompletion.create(
-                model="gpt-3.5-turbo",  # "gpt-3.5-turbo",
-                # model="text-davinci-003",
+                model="gpt-3.5-turbo",
                 messages=[
                     {"role": "system", "content": instr},
                     {"role": "user", "content": prompt},

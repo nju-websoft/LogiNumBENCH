@@ -15,7 +15,6 @@ ckpt_file = '/fine-tuneRT/largeF/pretrain'
 batchsz = 8
 lr = 1e-6
 
-
 def load_preprocess_data(data_file, store_file):
     raw = load_from_disk(data_file)
     raw = raw.rename_column('label', 'labels')
@@ -33,11 +32,7 @@ def load_preprocess_data(data_file, store_file):
 
     def preprocess_function(sample):
         return tokenizer(sample["inputs"], max_length=min(512, max_source_length), padding="max_length", truncation=True)
-        # if len(tokenized["input_ids"]) <= 512:
-        #     return tokenized
-        # else:
-        #     return None
-
+    
     tokenized_dataset = raw.map(
         preprocess_function, batched=True, remove_columns=["inputs"])
     print(data_file, tokenized_dataset)
@@ -53,7 +48,7 @@ def do_training(store_file, level):
     data_collator = DataCollatorWithPadding(tokenizer=tokenizer)
     training_args = TrainingArguments(
         output_dir=ckpt_file,
-        per_device_train_batch_size=batchsz,  # 设置批次大小
+        per_device_train_batch_size=batchsz,
         per_device_eval_batch_size=batchsz,
         learning_rate=lr,
         num_train_epochs=1000,
@@ -62,9 +57,6 @@ def do_training(store_file, level):
         save_total_limit=1,
         load_best_model_at_end=True,
         metric_for_best_model="accuracy"
-        # evaluation_strategy="steps",  # 在每个步骤评估
-        # eval_steps=100,  # 评估一次
-        # save_steps=1,  # 保存模型
     )
     print("---Trainging Argument---")
     print(training_args)
@@ -77,8 +69,8 @@ def do_training(store_file, level):
         return metric.compute(predictions=pred, references=true_labels)
 
     early_stopping_callback = EarlyStoppingCallback(
-        early_stopping_patience=5,  # Number of evaluations with no improvement before stopping
-        early_stopping_threshold=0.0001,  # Minimum improvement in the monitored metric
+        early_stopping_patience=5,
+        early_stopping_threshold=0.0001,
     )
     trainer = Trainer(
         model,

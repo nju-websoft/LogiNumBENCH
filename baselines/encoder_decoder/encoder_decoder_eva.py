@@ -1,20 +1,3 @@
-# import sys
-# def parse_arguments(args):
-#     parsed_args = {}
-#     for arg in args[1:]:
-#         key_value = arg.split('=')
-#         if len(key_value) == 2:
-#             key = key_value[0]
-#             value = key_value[1]
-#             parsed_args[key] = value
-#         else:
-#             raise ValueError("args parsing fault {0}".format(arg))
-#     return parsed_args
-
-# # modelPath
-# # 获取命令行参数
-# args = parse_arguments(sys.argv)
-
 import torch
 from transformers import T5Tokenizer, T5ForConditionalGeneration
 from datasets import DatasetDict,load_dataset, load_from_disk

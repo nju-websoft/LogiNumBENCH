@@ -11,8 +11,6 @@ def eva(checkpoint, tkdata, batchsz=128, device='cuda:2'):
     tokenized_datasets = DatasetDict.load_from_disk(tkdata)
     true_labels = [sample['labels'] for sample in tokenized_datasets["test"]]
 
-    preds = []
-
     input_ids = torch.tensor(tokenized_datasets["test"]["input_ids"])
     attention_mask = torch.tensor(tokenized_datasets["test"]["attention_mask"])
     token_type_ids = torch.tensor(tokenized_datasets["test"]["token_type_ids"])
@@ -32,29 +30,18 @@ def eva(checkpoint, tkdata, batchsz=128, device='cuda:2'):
             pred.extend(t_pred.tolist())   
 
     accuracy = accuracy_score(true_labels, pred)
-    # print("Accuracy:", accuracy)
 
     precision = precision_score(true_labels, pred)
-    # print("Precision:", precision)
-
+    
     recall = recall_score(true_labels, pred)
-    # print("Recall:", recall)
 
     f1 = f1_score(true_labels, pred)
-    # print("F1 Score:", f1)
-    return {"accuracy": accuracy, "precision": precision, "recall": recall, "f1": f1}
-    # preds.append({"accuracy": accuracy, "precision": precision, "recall": recall, "f1": f1, "pred": pred})
 
-    # import json
-    # with open("eval_res.json",'w') as file:
-    #     json.dump(preds,file)    
-    
+    return {"accuracy": accuracy, "precision": precision, "recall": recall, "f1": f1}
+ 
 def eva_roberta(checkpoint, tkdata, batchsz=128, device='cuda:4'):
     tokenized_datasets = DatasetDict.load_from_disk(tkdata)
     true_labels = [sample['labels'] for sample in tokenized_datasets["test"]]
-
-    preds = []
-
     input_ids = torch.tensor(tokenized_datasets["test"]["input_ids"])
     attention_mask = torch.tensor(tokenized_datasets["test"]["attention_mask"])
     tokenized_inputs = {"input_ids": input_ids, "attention_mask": attention_mask}
@@ -73,23 +60,14 @@ def eva_roberta(checkpoint, tkdata, batchsz=128, device='cuda:4'):
             pred.extend(t_pred.tolist())   
 
     accuracy = accuracy_score(true_labels, pred)
-    # print("Accuracy:", accuracy)
 
     precision = precision_score(true_labels, pred)
-    # print("Precision:", precision)
 
     recall = recall_score(true_labels, pred)
-    # print("Recall:", recall)
 
     f1 = f1_score(true_labels, pred)
-    # print("F1 Score:", f1)
+
     return {"accuracy": accuracy, "precision": precision, "recall": recall, "f1": f1}
-    # preds.append({"accuracy": accuracy, "precision": precision, "recall": recall, "f1": f1, "pred": pred})
-
-    # import json
-    # with open("eval_res.json",'w') as file:
-    #     json.dump(preds,file)    
-
 
 import json
 with open("albert_xlarge_config.json", 'r') as jsf:
@@ -101,8 +79,7 @@ preDataPath = "./{modelName}/{dataName}/tokenized_data"
 for modelName, mdict in obj.items():
     for trainData, sdict in mdict.items():
         print("-------------- {0} trained on {1} ------------------".format(modelName, trainData))
-        # if sdict["output"] == 0:
-        #     continue
+
         modelPath = preModelPath.format(modelName=modelName, dataName=trainData, ckpt=sdict["output"])
         sdict["eva"] = []
         for testData in dataNames:

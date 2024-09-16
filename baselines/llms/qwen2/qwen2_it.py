@@ -6,12 +6,11 @@ import pandas as pd
 import requests
 import json
 import os
-os.environ['CUDA_VISIBLE_DEVICES'] = '3,4'
+os.environ['CUDA_VISIBLE_DEVICES'] = '2,3'
 
-PATH = '/model/Qwen1.5-7B-Chat'
+PATH = 'Qwen2-7B-Instruct'
 
-tokenizer = AutoTokenizer.from_pretrained(
-    PATH, use_fast=False, trust_remote_code=True)
+tokenizer = AutoTokenizer.from_pretrained(PATH)
 model = AutoModelForCausalLM.from_pretrained(
     PATH, device_map="auto", trust_remote_code=True).eval()
 
@@ -29,7 +28,7 @@ def inference(sample):
     model_inputs = tokenizer([text], return_tensors="pt").to('cuda')
     generated_ids = model.generate(
         model_inputs.input_ids,
-        max_new_tokens=2048
+        max_new_tokens=1024
     )
     generated_ids = [
         output_ids[len(input_ids):] for input_ids, output_ids in zip(model_inputs.input_ids, generated_ids)
@@ -38,7 +37,7 @@ def inference(sample):
 
 
 if __name__ == "__main__":
-    with open('../common_instr.txt', 'r') as file:
+    with open('../qwen2_prompt.txt', 'r') as file:
         instr = file.read()
 
     data_path = '/logiNumBench/datas/'

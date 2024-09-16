@@ -1,4 +1,4 @@
-# LogiNumBench: Benchmarking Joint Numerical and Logical Reasoning over Natural Language
+# LogiNumBench: Benchmarking Joint Logical and Numerical Reasoning over Natural Language
 
 This repository serves as a generator for the LogiNumBench benchmark. Pre-generated examples can be found at [`data`](./data). Below, you will find a brief introduction to help you generate your own data.
 
@@ -176,13 +176,20 @@ Please configure paths carefully in the files to suit your environment.
 + **Llama3**
   + [llama3_it.py](baselines/llms/llama3/llama3_it.py)
   + [llama3_base.py](baselines/llms/llama3/llama3_base.py)
++ **Llama3.1**
+  + [llama3.1_it.py](baselines/llms/llama3.1/llama3.1_it.py)
+  + [llama3.1_base.py](baselines/llms/llama3.1/llama3.1_base.py)
 + **Gemma**
   + [gemma_it.py](baselines/llms/gemma/gemma_it.py)
   + [gemma_base.py](baselines/llms/gemma/gemma_base.py)
 + **Qwen1\.5**
   + [qwen_base.py](baselines/llms/qwen/qwen_base.py)
   + [qwen_chat.py](baselines/llms/qwen/qwen_chat.py)
-+ **ChatGPT**
++ **Qwen2**
+  + [qwen2_base.py](baselines/llms/qwen2/qwen2_base.py)
+  + [qwen2_it.py](baselines/llms/qwen2/qwen2_it.py)
+
++ **ChatGPT & GPT-4o**
   + [chatgpt_call.py](baselines/llms/chatgpt/chatgpt_call.py)
 
 #### Pretraining

@@ -6,8 +6,6 @@ import pandas as pd
 import os
 import argparse
 
-# 定义一个函数,用于解析由逗号分隔的GPU id列表
-
 
 def gpu_list(string):
     gpu_ids = []
@@ -19,12 +17,10 @@ def gpu_list(string):
     return gpu_ids
 
 
-# 创建命令行参数解析器
 parser = argparse.ArgumentParser(description='控制使用哪些GPU进行计算')
 parser.add_argument('--gpu', type=gpu_list, default=[],
                     help='要使用的GPU id列表,用逗号分隔')
 
-# 解析命令行参数
 args = parser.parse_args()
 print(','.join(map(str, args.gpu)))
 
