@@ -1,0 +1,135 @@
+Fact:
+0. Roderich stops Noell.
+1. In the egyptian context, Zerk is assigned the value 4.
+2. Orren vetoes Zerk.
+3. The relationship 'stop' defines the relationship between Orren and Zerk.
+4. Zerk invests in Noell.
+5. The stake association exists between Osborne and Roderich.
+6. Madge mitigates the effect of Zerk.
+7. Orren and Madge have a relationship described by stake.
+Rule:
+0. If the staple attribute of x is set to 1, then the durable attribute of x is also represented by 1.
+1. If the value of lesser for x is 3, then the value of weakening for x is 4.
+2. Whenever the relationship 'mitigate' connects x and y, the value of lesser in x is determined by adding 3 to the lesser attribute of y.
+3. Within x, the weakening attribute is marked as 4, which is a foreseen outcome when x is categorized as egyptian.
+4. If the relationship 'invest' exists between x and y, then x is associated with a value for the durable attribute that is 5 times the value of y's durable attribute plus 6.
+5. If the value of the made property for x is 4, then the value of the staple property for x is also 4.
+6. If the value of studied for x is 4, then the value of staple for x is also 4.
+7. If the relationship `invest` holds between x and y, then in the context of `lesser`, the value for x is determined by scaling the value of `lesser` from y by 8 and then adding 4.
+8. If the value 4 is associated with x in the context of weakening, then the value 4 is also directly assigned to x in the context of made.
+9. Whenever the relation 'stake' holds between x and y, the value of x's staple attribute is determined by multiplying y's staple attribute by 3 and then adding 8.
+Assertion:
+Orren's staple is greater than 14.26.
+Step reasoning:
+Default -> int0: Noell is 0 lesser; Fact4 & Rule7 & int0 -> int1: Zerk is 8*0+4=4 lesser; Fact6 & Rule2 & int1 -> int2: Madge is 4+3=7 lesser; Rule1 & int2 -> int3: Madge is 4 weakening; Rule8 & int3 -> int4: Madge is 4 made; Rule5 & int4 -> int5: Madge is 4 staple; Fact7 & Rule9 & int5 -> int6: Orren is 3*4+8=20 staple
+Answer:
+True
+
+Fact:
+0. Johnny writes Anne-Mar.
+1. The relationship pump establishes a connection between Gleda and Roice.
+2. Maury inspires Anne-Mar.
+3. In Roice, the dangerous attribute is marked with the value 1.
+4. Britni is in a pumping state related to Johnny.
+5. Roice writes Anne-Mar.
+6. Gleda is assigned the value 4 in the negative context.
+7. There is a relation rewrite between Johnny and Maury.
+Rule:
+0. If the value of subsequent for x is 2, then the value of negative for x is defined as 1.
+1. Under the cut context, the value of the cut attribute for x is determined by multiplying the value of y's cut attribute by 4 and then adding 1, which can be inferred if x is in a state of copying with respect to y.
+2. When the relationship rewrite is established between x and y, the subsequent attribute of x is assigned a value obtained by doubling the subsequent attribute of y and then adding 2.
+3. If the value of x in the negative property is 1, then the value of x in the christian property is 3.
+4. If the relationship "inspire" holds between x and y, then the value of the subsequent attribute for x is set to 3 times the value of y's subsequent attribute plus 4.
+5. If the value of wanted for x is 2, then x is assigned the value 2 for cut.
+6. If the relationship "inspire" holds between x and y, then x is assigned a value for the wanted attribute that is derived by multiplying y's wanted value by 4 and then adding 8.
+7. If the cut attribute of x is assigned the value 3, then the subsequent property of x is assigned the value 2.
+8. If the value 3 is associated with x in the christian context, then the value 4 is linked to x in the initial context.
+9. If the action 'pump' is observed between x and y, then x is designated with an initial value calculated by multiplying y's initial value by 5 and then adding 10.
+Assertion:
+Britni's initial is greater than 14.23.
+Step reasoning:
+Default -> int0: Anne-Mar is 0 subsequent; Fact2 & Rule4 & int0 -> int1: Maury is 3*0+4=4 subsequent; Fact7 & Rule2 & int1 -> int2: Johnny is 2*4+2=10 subsequent; Rule0 & int2 -> int3: Johnny is 1 negative; Rule3 & int3 -> int4: Johnny is 3 christian; Rule8 & int4 -> int5: Johnny is 4 initial; Fact4 & Rule9 & int5 -> int6: Britni is 5*4+10=30 initial
+Answer:
+True
+
+Fact:
+0. Jemmie confronts Kerianne.
+1. In Doloritas, the very attribute is recorded with the value 3.
+2. Under the relationship discredit, Jose discredits Cybel.
+3. Doloritas reflects Jemmie.
+4. Jacques gives Kerianne a thumbs up or down based on the relationship defined by thumb.
+5. Cybel reflects with regard to Doloritas.
+6. Jemmie is assigned the value 2 for the very property.
+7. Kerianne confronts Jose.
+Rule:
+0. If the due field in x has the value 2, then x is assigned the value 3 under saved.
+1. If x has the value 3 in the congressional context, then it logically follows that x is assigned the value 2 in the strategic context.
+2. If the strategic attribute of x is recorded as 3, then the ordered attribute of x will hold the value 2.
+3. When x is marked as due with the value 3, it subsequently has the value 2 associated with ordered.
+4. If the confrontation between x and y is observed, then x exhibits an increased value in the saved attribute, calculated by doubling y's saved value and then adding 9.
+5. If the relationship "discredit" holds between x and y, then in the congressional field, the value of x is set to the value of y's congressional attribute plus 5.
+6. If the relationship discredit holds between x and y, then the value in x's due field is determined by multiplying y's due value by 4 and then adding 2.
+7. If there exists a relationship `thumb` between x and y, then for x, the value `very` is documented as 4 times the value of `very` in y plus 7.
+8. If the thumb relationship holds between x and y, then x's ordered property is set to twice the value of y's ordered property plus 8.
+9. When it can be said that x reflects y, the due property for x is represented by the value obtained by multiplying y's due attribute by 9 and then adding 4.
+Assertion:
+Jemmie's saved is greater than 14.78.
+Step reasoning:
+Default -> int0: Jemmie is 0 due; Fact3 & Rule9 & int0 -> int1: Doloritas is 9*0+4=4 due; Fact5 & Rule9 & int1 -> int2: Cybel is 9*4+4=40 due; Fact2 & Rule6 & int2 -> int3: Jose is 4*40+2=162 due; Rule0 & int3 -> int4: Jose is 3 saved; Fact7 & Rule4 & int4 -> int5: Kerianne is 2*3+9=15 saved; Fact0 & Rule4 & int5 -> int6: Jemmie is 2*15+9=39 saved
+Answer:
+True
+
+Fact:
+0. In the context of revise, Scotti and Yule are connected.
+1. The relationship combat defines a connection between Kacey and Merrel.
+2. Kellsie and Merrel share a connection defined by the feel relationship.
+3. The deplete relationship is observed between Yule and Krishna.
+4. Kellsie and Yule maintain a relationship described by revise.
+5. Merrel works with Kellsie.
+6. Krishna and Scotti are connected through a relationship described by revise.
+7. Merrel and Krishna engage in combat.
+Rule:
+0. If x has the value 4 in the all context, then it is documented that x has the value 1 in the secure context.
+1. If the revise relationship is observed between x and y, then the occidental field of x is assigned a value calculated by tripling the occidental value of y and adding 7.
+2. Whenever the relationship "revise" holds between x and y, x's value in the "bigger" context is determined by tripling y's "bigger" value and then adding 4.
+3. If the relationship 'feel' defines the relationship between x and y, then the value of x's thin attribute is determined by multiplying y's thin attribute value by 7 and adding 5.
+4. If the value of all for x is 1, then the value of secure for x is registered as 3.
+5. If the relationship 'revise' is satisfied between x and y, then x is marked with a value in the 'some' field, which is obtained by scaling y's 'some' attribute by 4 and then appending 3.
+6. If the relationship deplete holds between x and y, then in x, the value of all is set to be three times the value of all for y, plus 4.
+7. If the relationship 'revise' holds between x and y, then the value of x in the secure field is set to 3 times the secure value of y plus 1.
+8. If the combat relationship between x and y is established, then the value of x in the secure field is determined by multiplying y's secure value by 4 and then adding 9.
+9. If the value of secure for x is 2, then it can be inferred that the value of bigger for x is 3.
+Assertion:
+Kacey's secure is less than 12.04.
+Step reasoning:
+Default -> int0: Krishna is 0 all; Fact3 & Rule6 & int0 -> int1: Yule is 3*0+4=4 all; Rule0 & int1 -> int2: Yule is 1 secure; Fact0 & Rule7 & int2 -> int3: Scotti is 3*1+1=4 secure; Fact6 & Rule7 & int3 -> int4: Krishna is 3*4+1=13 secure; Fact7 & Rule8 & int4 -> int5: Merrel is 4*13+9=61 secure; Fact1 & Rule8 & int5 -> int6: Kacey is 4*61+9=253 secure
+Answer:
+False
+
+Fact:
+0. Verney and Tiffy maintain a connection defined by exchange.
+1. The multiple property for Veronica is shown as 2.
+2. Tiffy believes Veronica.
+3. In Joey, the industrialised attribute is assigned the value 3.
+4. Joey attempts to seduce Veronica.
+5. In the right context, Verney is assigned the value 4.
+6. Veronica prosecutes Joey.
+7. Eve believes Joey.
+Rule:
+0. For \( x \), if the value of compound is 1, then the value of complex for \( x \) is 4.
+1. If the relationship "believe" holds between x and y, then within the context of inside, the value of x is determined by adding 2 to y's value.
+2. If the relationship 'sweeten' holds between x and y, then the value of x's complex attribute is set to 9 times the value of y's complex attribute plus 7.
+3. Given that x has the value 3 for unsuccessful, it follows that x has the value 2 for industrialised.
+4. In the context of seduce, if the relationship between x and y is established, then the value of x's inside attribute is set to 7 times the value of y's inside attribute plus 1.
+5. If the inside attribute of x is marked with 3, then under complex, x is marked with 2.
+6. If x is marked with the value 2 in the industrialised context, then x is assigned the value 1 for inside.
+7. If the seduce relationship is observed between x and y, then the value in x's right field is determined by adding 1 to the value of y's right attribute.
+8. If x has the value 2 in the multiple attribute, then the value 3 is assigned to the unsuccessful property of x.
+9. If the value of complex for x is 4, then x is naturally designated with the value 1 for industrialised.
+Assertion:
+Eve's complex is less than 13.92.
+Step reasoning:
+Fact1 -> int0: Veronica is 2 multiple; Rule8 & int0 -> int1: Veronica is 3 unsuccessful; Rule3 & int1 -> int2: Veronica is 2 industrialised; Rule6 & int2 -> int3: Veronica is 1 inside; Fact4 & Rule4 & int3 -> int4: Joey is 7*1+1=8 inside; Fact7 & Rule1 & int4 -> int5: Eve is 8+2=10 inside; Rule5 & int5 -> int6: Eve is 2 complex
+Answer:
+True
+

@@ -1,0 +1,27 @@
+[
+    {
+        "fr": "is(?x, considerate, 1) -> is(?x, round, 2)",
+        "nl": "If x has 1 as the value of considerate is fulfilled, then the value 2 is associated with x in the round context naturally follows suit.",
+        "gene": "If x has the value 1, indicating that considerate is fulfilled, then in the round context, x naturally takes the value 2."
+    },
+    {
+        "fr": "is(Amelia, rough, 2)",
+        "nl": "Under rough, Amelia is indicated by the value 2.",
+        "gene": "In the rough context, Amelia is assigned the value 2."
+    },
+    {
+        "fr": "hugs(?x, ?y) -> is(?x, cold, 6y+9)",
+        "nl": "If the relationship hugs defines the relationship between x and y is fulfilled, then within x, the cold field is populated with amplifying the value associated with the attribute cold of y by 6 and then including 9 naturally follows suit.",
+        "gene": "If the relationship 'hugs' between x and y is fulfilled, then x is assigned a value in the cold field, calculated by multiplying y’s cold attribute by 6 and adding 9."
+    },
+    {
+        "fr": "interacts(Emily, Sophia)",
+        "nl": "Emily and Sophia maintain a relationship as described by interacts.",
+        "gene": "Emily and Sophia are connected through a relationship described by interacts."
+    },
+    {
+        "fr": "helps(Grace, Gary)",
+        "nl": "Grace helps Gary.",
+        "gene": "Grace helps Gary."
+    }
+]

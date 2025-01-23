@@ -1,0 +1,135 @@
+Fact:
+0. Penni and Piotr are related through the relationship denoted by suit.
+1. Ramesh and Catlaina share a relationship denoted by incorporate.
+2. There is a relation called incorporate between Catlaina and Cyb.
+3. Catlaina tucks Piotr.
+4. Piotr and Ramesh maintain a connection defined by incorporate.
+5. Ramesh and Cyb maintain a relationship defined by tuck.
+6. Catlaina and Ramesh experience a break in their relationship.
+7. The relationship 'send' defines a connection between Piotr and Zenia.
+Rule:
+0. If the value of statutory for x is 2, then it follows that the assigned field for x will be marked with 3.
+1. If the relationship "suit" holds between x and y, then x is assigned the value of y's "assigned" attribute plus 1.
+2. If x has the value 1 for the assigned characteristic, then x is assigned the value 3 under the unrealistic context.
+3. If the relationship 'incorporate' holds between x and y, then the value of x in the trapped field is determined by scaling y's trapped value by 2 and then adding 1.
+4. If the send relationship is established between x and y, then the value of x's statutory attribute is set to 2 times the value of y's statutory attribute plus 1.
+5. If the statutory attribute of x is recorded with the value 1, then the proper attribute of x will naturally be assigned the value 3.
+6. Under the wide context, x is assigned the value 2, provided that within x, the statutory attribute is noted as 4.
+7. If the relationship 'incorporate' holds between x and y, then within x, the value for the attribute 'wide' is determined by doubling the 'wide' attribute of y and then adding 4.
+8. If X is categorized as unrealistic with a value of 2, then within X, the assigned attribute is set to 4.
+9. If the relationship 'incorporate' holds between x and y, then in the unrealistic context, x is assigned a value that is 1 more than the value assigned to the unrealistic attribute of y.
+Assertion:
+Penni's unrealistic is greater than 3.71.
+Step reasoning:
+Default -> int0: Cyb is 0 unrealistic; Fact2 & Rule9 & int0 -> int1: Catlaina is 0+1=1 unrealistic; Fact1 & Rule9 & int1 -> int2: Ramesh is 1+1=2 unrealistic; Fact4 & Rule9 & int2 -> int3: Piotr is 1+1=2 unrealistic; Rule8 & int3 -> int4: Piotr is 4 assigned; Fact0 & Rule1 & int4 -> int5: Penni is 4+1=5 assigned; Rule2 & int5 -> int6: Penni is 3 unrealistic
+Answer:
+False
+
+Fact:
+0. Jody cures Ripley.
+1. Under the coordinate context, Jasmine is documented with the value 3.
+2. The relationship cure establishes that Ripley cures Jasmine.
+3. Jasmine dislikes Jody.
+4. Jasmine sees Patti.
+5. Madelle sees Ed.
+6. Madelle outdistances Patti in some context.
+7. Ed and Madelle maintain a relationship described by erect.
+Rule:
+0. If the relationship 'cure' holds between x and y, then within x, the value of subsidized is determined by doubling y's subsidized value and adding 1.
+1. If the relationship "dislike" holds between x and y, then the value of x in the "turned" attribute is determined by multiplying y's "turned" value by 2 and then adding 1.
+2. Within x, if the value 1 is associated with the flowing property, then the coordinate property of x is also identified with 1.
+3. If the coordinate field of x is denoted with 2, then x is attributed with 3 in the demanding category.
+4. If the turned property of x is represented by 1, then the flowing characteristic of x is indicated by 2.
+5. If the relationship 'see' holds between x and y, then the value of x in the adequate field is determined by doubling y's adequate value and adding 2.
+6. When x is characterized by 3 in the turned context, it implies that x is represented by 4 in the iron context.
+7. If the demanding field for x contains the value 4, then x is documented with the value 1 in the turned field.
+8. If the coordinate field of x is marked as 1, then the value 1 is also logged for x under demanding.
+9. If the relationship 'cure' is established between x and y, then for x, the value of flowing is determined by multiplying y's flowing attribute by 2 and then adding 1.
+Assertion:
+Jody's demanding is greater than 3.79.
+Step reasoning:
+Default -> int0: Jody is 0 turned; Fact3 & Rule1 & int0 -> int1: Jasmine is 2*0+1=1 turned; Rule4 & int1 -> int2: Jasmine is 2 flowing; Fact2 & Rule9 & int2 -> int3: Ripley is 2*2+1=5 flowing; Fact0 & Rule9 & int3 -> int4: Jody is 2*5+1=11 flowing; Rule2 & int4 -> int5: Jody is 1 coordinate; Rule8 & int5 -> int6: Jody is 1 demanding
+Answer:
+False
+
+Fact:
+0. Dorri and Gwyn are connected through a relationship defined by equal.
+1. Donica and Delphine have a relationship described by flush.
+2. In the context of equal, Elana and Donica are connected.
+3. Donica and Elana maintain a connection defined by flush.
+4. The relationship flush exists between Gwyn and Delphine.
+5. Donica transacts with Elana.
+6. Delphine asks Dorri.
+7. Gwyn and Delphine are considered equal.
+Rule:
+0. If x has the value 3 in the provincial context, then in the fair context, x is assigned the value 2.
+1. If the universal attribute for x is set to 1, then the value 4 is associated with x in the waste context.
+2. If x has the value 4 for protective, then in the bigger context, x is noted to have the value 2.
+3. In the waste category, if x is characterized by 4, then x is recorded as having a value of 4 in the bigger context.
+4. If the relationship 'ask' holds between x and y, then x's provincial attribute is stored for y, with the value calculated as 1y + 1.
+5. If x is marked with 1 in the provincial context, then the value of x in the universal context is defined as 2.
+6. When the provincial attribute of x is assigned a value of 2, then the fair attribute assigns x a value of 3.
+7. If the relation "equal" holds between x and y, then in the universal context, x is marked with a value obtained by multiplying y's universal attribute by 2 and then adding 1.
+8. If the indefinite attribute of x is represented by 2, then the waste attribute of x is also defined as 2.
+9. Whenever the relationship "impress" holds between x and y, the value of x in the waste field is determined by doubling y's waste value and then adding 1.
+Assertion:
+Dorri's bigger is greater than 3.46.
+Step reasoning:
+Default -> int0: Dorri is 0 provincial; Fact6 & Rule4 & int0 -> int1: Delphine is 0+1=1 provincial; Rule5 & int1 -> int2: Delphine is 2 universal; Fact7 & Rule7 & int2 -> int3: Gwyn is 2*2+1=5 universal; Fact0 & Rule7 & int3 -> int4: Dorri is 2*5+1=11 universal; Rule1 & int4 -> int5: Dorri is 4 waste; Rule3 & int5 -> int6: Dorri is 4 bigger
+Answer:
+True
+
+Fact:
+0. Beau's leading is recorded with the value 4.
+1. Beau and Gabriel are involved in a relationship described by commit.
+2. Erasmus and Dabney are connected through a relationship described by commit.
+3. Under the stretch context, Dabney is designated with the value 1.
+4. Erasmus ignores Rosalinda.
+5. Dabney sweetens Gabriel.
+6. Erasmus outbids Rosalinda.
+7. The relationship channel establishes a connection between Gabriel and Erasmus.
+Rule:
+0. If the relationship outbid holds between x and y, then the value of the leading attribute for x is determined by multiplying y's leading attribute by 2 and then adding 1.
+1. If X has the value 4 for the short attribute, then it is concluded that X is associated with the value 1 for the entitled attribute.
+2. If the channel relationship exists between x and y, then in the entitled context, x is assigned a value that is 1 plus y's entitled value.
+3. When the entitled attribute of x is marked with 1, then under the individual context, x is indicated by the value 4.
+4. If the value of the stretch field for x is 2, then it inevitably follows that the delayed field for x is 4.
+5. Within x, the short field is populated with the value obtained by adding 2 to the value held by y for the attribute short, as defined by the relationship commit between x and y.
+6. If the relationship `sweeten` holds between x and y, then in the context of individual, x is assigned a value that is twice the value of y's individual characteristic, plus 2.
+7. In the context of individual, if x holds the value 4, then x is indicated to have the value 2 for short.
+8. Whenever the relationship 'commit' holds between x and y, it follows that for x, the potential attribute is represented by a value calculated by doubling y's potential value and then adding 1.
+9. If the delayed attribute of x is associated with the value 2, then the stretch property of x is marked with the value 1.
+Assertion:
+Beau's individual is less than 3.13.
+Step reasoning:
+Default -> int0: Erasmus is 0 entitled; Fact7 & Rule2 & int0 -> int1: Gabriel is 0+1=1 entitled; Rule3 & int1 -> int2: Gabriel is 4 individual; Rule7 & int2 -> int3: Gabriel is 2 short; Fact1 & Rule5 & int3 -> int4: Beau is 2+2=4 short; Rule1 & int4 -> int5: Beau is 1 entitled; Rule3 & int5 -> int6: Beau is 4 individual
+Answer:
+False
+
+Fact:
+0. Dulci awards Fredra.
+1. Karita and Anne-Marie engage in a relationship defined by play.
+2. The relationship maximize holds between Dulci and Fredra.
+3. Anne-Marie and Karita are connected through an incorporate relationship.
+4. Karita and Dulci are related through the relationship denoted by incorporate.
+5. Under the relationship count, Dulci is related to Fredra.
+6. The relationship count defines the relationship between Anne-Mar and Fredra.
+7. Karita and Dulci engage in a play relationship.
+Rule:
+0. If the award relationship between x and y is established, then within x, the value of iv is determined by multiplying y's iv by 2 and then adding 4.
+1. When the condition maximize is satisfied between x and y, the value of x's every attribute is set to 4 plus the value of y's every attribute.
+2. If the relationship maximize holds between x and y, then for x, the value of quiet is determined by multiplying y's quiet value by 2 and adding 4.
+3. If the count relationship between x and y is fulfilled, then in the elected context, x is assigned a value of 1 multiplied by y plus 3.
+4. If x has the value 1 in the withdrawn context, then the value 3 is associated with x in the every context.
+5. When X has the value 2 for the quiet attribute, it is associated with the value 1 for the withdrawn attribute.
+6. When the value of iv for x is 1, it can be inferred that the value of halting for x is 3.
+7. If x is characterized by 1 in the northwest context, then x's withdrawn attribute will hold the value 3.
+8. If x has the value 3 for the every characteristic, then x will have the value 1 for iv.
+9. If the relationship 'incorporate' defines a connection between x and y, then within x, the value for quiet is determined by doubling y's quiet value and adding 2.
+Assertion:
+Anne-Marie's iv is less than 3.89.
+Step reasoning:
+Default -> int0: Fredra is 0 quiet; Fact2 & Rule2 & int0 -> int1: Dulci is 2*0+4=4 quiet; Fact4 & Rule9 & int1 -> int2: Karita is 2*4+2=10 quiet; Fact3 & Rule9 & int2 -> int3: Anne-Marie is 2*10+2=22 quiet; Rule5 & int3 -> int4: Anne-Marie is 1 withdrawn; Rule4 & int4 -> int5: Anne-Marie is 3 every; Rule8 & int5 -> int6: Anne-Marie is 1 iv
+Answer:
+True
+

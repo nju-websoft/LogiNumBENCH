@@ -1,0 +1,105 @@
+Fact:
+0. The value for Vasili in the violated context is 2.
+1. Butler bribes Vasili.
+2. In the context of violated, Archy is marked with the value 4.
+3. Under the relationship confront, Archy interacts with Cilka.
+4. Vasili nominates Archy.
+5. The nomination association is observed between Butler and Vasili.
+Rule:
+0. If x is marked as violated with a value of 1, then in the context of european, x is annotated with a value of 2.
+1. If the relationship 'confront' holds between x and y, then the value of x's european attribute is determined by multiplying y's european attribute by 4 and adding 7.
+2. Whenever the relationship "nominate" holds between x and y, it follows that the value of determining for x is documented as 5 times the value of determining for y, plus 9.
+3. Whenever the relationship "confront" is established between x and y, the value of x in the determining context is set to be 5 times the value of y's determining attribute plus 1.
+4. If the value of European for x is 2, then the value of Off for x is also 2.
+5. If the value of the off field for x is 1, then x is assigned the value 4 in the european context.
+Assertion:
+Butler's determining is less than 33.11.
+Step reasoning:
+Default -> int0: Cilka is 0 determining; Fact3 & Rule3 & int0 -> int1: Archy is 5*0+1=1 determining; Fact4 & Rule2 & int1 -> int2: Vasili is 5*1+9=14 determining; Fact5 & Rule2 & int2 -> int3: Butler is 5*14+9=79 determining
+Answer:
+False
+
+Fact:
+0. In the context of outbid, Marga relates to Caron.
+1. Nancee cripples Adelind.
+2. Adelind and Marga have a relationship characterized by cripple.
+3. Nancee outbids Caron.
+4. The mix correlation exists between Caron and Adelind.
+5. For Nancee, the value 4 is assigned to running.
+Rule:
+0. If the relationship cripple holds between x and y, then within x, the final attribute is set to a value obtained by multiplying y's final attribute by 6 and adding 3.
+1. When the value 3 is associated with x under the final context, x is then noted to have the value 2 in the sixth attribute.
+2. Whenever x is associated with the value 3 under the running attribute, the sought field of x is represented by 2.
+3. If x has the value 4 in the final context, then x is assigned the value 1 for the sixth attribute.
+4. If the value of sought for x is 1, then the value of final for x is specified as 4.
+5. Given that x is attributed the value 2 in the final property, it is also documented with the value 2 in the sought property.
+Assertion:
+Nancee's sixth is less than 29.48.
+Step reasoning:
+Default -> int0: Marga is 0 final; Fact2 & Rule0 & int0 -> int1: Adelind is 6*0+3=3 final; Fact1 & Rule0 & int1 -> int2: Nancee is 6*3+3=21 final; Rule1 & int2 -> int3: Nancee is 2 sixth
+Answer:
+True
+
+Fact:
+0. In the micro context, Jacquelynn is assigned the value 1.
+1. Deb is mean to Jacquelynn.
+2. Jacquelynn and Deb have a relationship defined by determine.
+3. Deb and Katinka travel together.
+4. Belia and Jacquelynn are connected through a relationship defined by determine.
+5. Deb is mean to Katinka.
+Rule:
+0. Whenever the controlling attribute of x is set to 4, the value 2 is recorded for x in the micro context.
+1. If the relationship "determine" holds between x and y, then the value of x in the "set" context is determined by multiplying the value of y's "set" attribute by 7 and adding 6.
+2. In the context of set, x is assigned the value 3 if the huge attribute is associated with the value 3 in x.
+3. If the travel relationship between x and y is present, then the value of x's set attribute is determined by multiplying y's set feature by 10 and adding 3.
+4. If the value of huge for x is 4, then x is assigned the value 1 for the micro property.
+5. If the relationship "determine" connects x and y, then the value of x in the "huge" attribute is derived by multiplying y's "huge" value by 8 and then adding 2.
+Assertion:
+Belia's set is greater than 27.68.
+Step reasoning:
+Default -> int0: Katinka is 0 set; Fact3 & Rule3 & int0 -> int1: Deb is 10*0+3=3 set; Fact2 & Rule1 & int1 -> int2: Jacquelynn is 7*3+6=27 set; Fact4 & Rule1 & int2 -> int3: Belia is 7*27+6=195 set
+Answer:
+True
+
+Fact:
+0. The cleared attribute of Germaine is assigned the value 1.
+1. A triple link is observed between Izzi and Lark.
+2. Lark and Linus are connected through a relationship described by triple.
+3. Lark bans Germaine.
+4. Lark and Izzi engage in a conduct relationship.
+5. Under the relationship triple, Germaine relates to Izzi.
+Rule:
+0. If x has the value 1 for little, then in the context of previous, x naturally takes the value 2.
+1. If x is associated with the value 3 under the listed attribute, then in the cleared context, x is recorded with the value 1.
+2. If the relationship 'triple' holds between x and y, then the value of x's previous property is determined by adding 2 to the previous property of y.
+3. If the value 4 is assigned to x for the cleared attribute, then it follows that the value 1 is assigned to x for the little attribute.
+4. Whenever x has the value 3 in the little context, it is noted as having the value 2 in the listed context.
+5. If the value of listed for x is 1, then the value of previous for x is 4.
+Assertion:
+Germaine's previous is less than 33.79.
+Step reasoning:
+Default -> int0: Linus is 0 previous; Fact2 & Rule2 & int0 -> int1: Lark is 0+2=2 previous; Fact1 & Rule2 & int1 -> int2: Izzi is 2+2=4 previous; Fact5 & Rule2 & int2 -> int3: Germaine is 2+2=4 previous
+Answer:
+True
+
+Fact:
+0. In the context of incorporate, Clement and Phebe are connected.
+1. Skippy flushes Phebe.
+2. The relationship incorporate holds between Phebe and Grover.
+3. Grover and Skippy are related through the incorporate relationship.
+4. Skippy is assigned the value 3 in the surrounding context.
+5. The flush correlation exists between Grover and Clement.
+Rule:
+0. If the relation flush holds between x and y, then the value of x in the republican category is determined by multiplying y's republican value by 10 and adding 6.
+1. If the relationship 'incorporate' holds between x and y, then x's surrounding attribute is set to a value obtained by multiplying y's surrounding attribute by 10 and adding 1.
+2. If X has the value 1 for the adopted property, then X naturally receives the value 2 for the surrounding property.
+3. Whenever the relationship 'view' holds between x and y, the value of x's republican attribute is determined by multiplying y's republican value by 7 and then adding 3.
+4. If the value of surrounding for x is 2, then it can be inferred that the value of republican for x is also 2.
+5. If x is assigned the value 1 under republican, then it can be inferred that x holds the value 4 under surrounding.
+Assertion:
+Clement's surrounding is less than 41.04.
+Step reasoning:
+Fact4 -> int0: Skippy is 3 surrounding; Fact3 & Rule1 & int0 -> int1: Grover is 10*3+1=31 surrounding; Fact2 & Rule1 & int1 -> int2: Phebe is 10*31+1=311 surrounding; Fact0 & Rule1 & int2 -> int3: Clement is 10*1+1=11 surrounding
+Answer:
+True
+

@@ -1,0 +1,115 @@
+Fact:
+0. Bella expresses Stormy.
+1. Stormy contributes to Bella.
+2. In the context of express, Bree and Bella share a connection.
+3. The relationship express holds between Stormy and Carmelle.
+4. Under the relationship swap, Bree exchanges places with Chery.
+5. The relationship swap connects Chery and Stormy.
+6. It can be said that Stormy expresses Bree.
+Rule:
+0. If the value of the continued attribute for x is 1, then the value of the tied attribute for x is annotated as 4.
+1. For x, if the value 3 is associated with continued, then the value 3 is also associated with x's tied attribute.
+2. For x, if the value 4 is associated with intense, then x is also characterized by the value 1 in the continued context.
+3. If the value of the seasonal attribute for x is 1, then the continued attribute for x is marked with 3.
+4. Within x, the value 2 is assigned to the underlying field if x is characterized by 4 in the seasonal field.
+5. If the value of the tied attribute for x is 4, then the seasonal attribute for x is associated with the value 2.
+6. If the relationship 'swap' holds between x and y, then the value of x in the seasonal context is determined by adding 1 to the value of y's seasonal attribute.
+Assertion:
+Bree's tied is less than 35.26.
+Step reasoning:
+Default -> int0: Stormy is 0 seasonal; Fact5 & Rule6 & int0 -> int1: Chery is 0+1=1 seasonal; Fact4 & Rule6 & int1 -> int2: Bree is 1+1=2 seasonal; Rule3 & int2 -> int3: Bree is 3 continued; Rule1 & int3 -> int4: Bree is 3 tied
+Answer:
+True
+
+Fact:
+0. Goldi carries Dela.
+1. Dela feeds Lydia.
+2. Under the relationship 'feed', Lydia feeds Goldi.
+3. The value of Hanan's broke attribute is 4.
+4. The unwilling attribute of Dela is represented by the value 1.
+5. Dela carries Hanan.
+6. Elonore carries Dela.
+Rule:
+0. If the value of 4 is assigned to the primary attribute for x, then the value 3 is naturally assigned to the unwilling attribute for x.
+1. If the action carry is performed by x with respect to y, then the value of x's broke attribute is determined by multiplying y's broke attribute by 3 and adding 1.
+2. Whenever the value of statistical for x is 3, it follows that the value of federal for x is 4.
+3. If x has the value 1 in the context of broke, then within x, federal is marked with the value 2.
+4. If the relationship 'spurn' holds between x and y, then x's unwilling attribute is set to nine times the value of y's unwilling attribute plus five.
+5. When the relationship "feed" is established between x and y, the value of x's federal attribute is determined by multiplying y's federal value by 4 and then adding 9.
+6. If x is assigned the value 3 in the context of broke, then x is also defined as having the value 3 for unwilling.
+Assertion:
+Lydia's federal is less than 25.25.
+Step reasoning:
+Fact3 -> int0: Hanan is 4 broke; Fact5 & Rule1 & int0 -> int1: Dela is 3*4+1=13 broke; Fact0 & Rule1 & int1 -> int2: Goldi is 3*13+1=40 broke; Rule3 & int2 -> int3: Goldi is 2 federal; Fact2 & Rule5 & int3 -> int4: Lydia is 4*2+9=17 federal
+Answer:
+True
+
+Fact:
+0. The relationship guard establishes a connection between Lorena and Donella.
+1. Pietra is guarding Bernardina.
+2. In the context of interest, Tiena and Donella have a shared connection.
+3. Bernardina improves Lorena.
+4. The relationship deduct describes the interaction between Tiena and Pietra.
+5. Tiena shows interest in Pietra.
+6. Tiena shows interest in Lorena.
+Rule:
+0. If the relationship `deduct` between x and y is fulfilled, then the value in the exchangeable field for x is determined by multiplying y's exchangeable attribute by 8 and then adding 7.
+1. If the value of square for x is 4, then x is recorded with a value of 1 in the exchangeable field.
+2. If the relationship between x and y is characterized by guard being met, then the value of x's exchangeable attribute is set to five times the value of y's exchangeable attribute plus 10.
+3. If the value 1 is associated with x in the exchangeable context, then the value 2 is recorded for x in the no context.
+4. Whenever the exchangeable field of x is set to 2, x is then documented with the value 1 under the aggregate label.
+5. If the relationship `improve` defines the relationship between x and y, then within x, the `exchangeable` feature is associated with a value calculated by multiplying y's `exchangeable` feature by 6 and then adding 10.
+6. If x is characterized by the value 2 in the context of defending, then x is attributed the value 1 in the exchangeable context.
+Assertion:
+Tiena's exchangeable is greater than 16.87.
+Step reasoning:
+Default -> int0: Donella is 0 exchangeable; Fact0 & Rule2 & int0 -> int1: Lorena is 5*0+10=10 exchangeable; Fact3 & Rule5 & int1 -> int2: Bernardina is 6*10+10=70 exchangeable; Fact1 & Rule2 & int2 -> int3: Pietra is 5*70+10=360 exchangeable; Fact4 & Rule0 & int3 -> int4: Tiena is 8*360+7=2887 exchangeable
+Answer:
+True
+
+Fact:
+0. Sallyanne is assigned the value 3 in the progressive category.
+1. Mela obtains from Hiro.
+2. Hiro obtains from Sallyanne.
+3. Under the relationship obtain, Sallyanne obtains from or acquires what Shari has.
+4. Under the relationship receive, Sallyanne receives from Mela.
+5. The relationship receive establishes the interaction between Hiro and Sallyanne.
+6. Mela and Hiro maintain a relationship as described by notice.
+Rule:
+0. If the value of progressive for x is 2, then x is identified with 3 in the massive context.
+1. If x is designated with the value 2 in the soft context, then the mexican attribute of x is also assigned the value 2.
+2. If \( x \) is attributed with 3 in the unstable category, then \( x \) is also attributed with 3 in the mexican category.
+3. Given that x and y share a relationship denoted by "notice," in the context of "encouraging," the value of x is set to be 9 times the encouraging value of y plus 6.
+4. If the relationship "obtain" defines the relationship between x and y, then x is marked with a value in the soft category, which is obtained by scaling y's soft value by 9 and subsequently adding 2.
+5. If the value 3 is assigned to x in the context of mexican, then within x, encouraging is marked with the value 4.
+6. For x, if the massive attribute is associated with the value 3, then the encouraging attribute is described by the value 4.
+Assertion:
+Mela's mexican is greater than 16.13.
+Step reasoning:
+Default -> int0: Shari is 0 soft; Fact3 & Rule4 & int0 -> int1: Sallyanne is 9*0+2=2 soft; Fact2 & Rule4 & int1 -> int2: Hiro is 9*2+2=20 soft; Fact1 & Rule4 & int2 -> int3: Mela is 9*2+2=20 soft; Rule1 & int3 -> int4: Mela is 2 mexican
+Answer:
+False
+
+Fact:
+0. Pierce and Marijo are connected through a buffet relationship.
+1. In the context of Pierce, the value for disastrous is 3.
+2. Manda suggests Pierce.
+3. For Pierce, the value 3 is recorded in the changed field.
+4. Marijo suggests Othilia.
+5. Othilia suggests Etti.
+6. The relationship 'suggest' defines the relationship between Pierce and Marijo.
+Rule:
+0. If the relationship "stab" is established between x and y, then x's recurring attribute is set to a value obtained by scaling y's recurring value by 3 and then adding 7.
+1. If the attribute recurring is associated with x and has a value of 3, then x is also marked with the value 4 for the attribute disastrous.
+2. When recurring is assigned a value of 4 in x, it ensures that narrowing is subsequently assigned a value of 2 in x.
+3. If the recurring attribute in x is assigned the value 2, then under the narrowing context, x is also assigned the value 2.
+4. If the relationship 'pick' is established between x and y, then the value of narrowing for x is set to three times the value of narrowing for y plus nine.
+5. If the relationship 'suggest' holds between x and y, then within the context of recurring, x is assigned a value obtained by multiplying y's recurring value by 6 and then adding 4.
+6. Given the relationship "stab" between x and y, the value of x's "changed" attribute is set to 3 times the value of y's "changed" attribute plus 3.
+Assertion:
+Manda's recurring is less than 23.05.
+Step reasoning:
+Default -> int0: Etti is 0 recurring; Fact5 & Rule5 & int0 -> int1: Othilia is 6*0+4=4 recurring; Fact4 & Rule5 & int1 -> int2: Marijo is 6*4+4=28 recurring; Fact6 & Rule5 & int2 -> int3: Pierce is 6*4+4=28 recurring; Fact2 & Rule5 & int3 -> int4: Manda is 6*28+4=172 recurring
+Answer:
+False
+

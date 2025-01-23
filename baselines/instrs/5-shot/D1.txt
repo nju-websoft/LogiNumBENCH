@@ -1,0 +1,105 @@
+Fact:
+0. The relationship limit defines the relationship between Andre and Randy.
+1. Under the relationship give, Clare gives to Andre.
+2. Francesmary gives to Randy.
+3. The limit correlation exists between Francesmary and Clare.
+4. Francesmary and Randy are connected through a relationship described by associate.
+5. Under the relationship limit, Francesmary is related to Andre.
+Rule:
+0. For \( x \), if the value 1 is associated with the agreed property, then \( x \) is also identified with the value 4 for the future property.
+1. If the relationship 'give' is fulfilled between x and y, then in the digital context, x is assigned a value equal to 2 times the digital value of y plus 2.
+2. If the value of the agreed property for x is 2, then x is also attributed with the value 2 in the future category.
+3. If x has the value 1 for steady, then in the digital context, x will have the value 2.
+4. If x is associated with the value 2 in the steady attribute, then it can be inferred that x is represented by the value 4 in the digital context.
+5. If the relationship 'give' is fulfilled between x and y, then for x, the value of the future attribute is determined by multiplying y's future attribute by 2 and then adding 1.
+Assertion:
+Francesmary's digital is greater than 3.76.
+Step reasoning:
+Default -> int0: Randy is 0 digital; Fact2 & Rule1 & int0 -> int1: Francesmary is 2*0+2=2 digital
+Answer:
+False
+
+Fact:
+0. Sonia dominates Merril.
+1. Margareta and Paulita are connected through a decrease relationship.
+2. Merril experiences a decrease in relation to Paulita.
+3. Merril dominates Margareta.
+4. Merril exhibits Margareta.
+5. In the lucky context, Paulita is characterized by the value 4.
+Rule:
+0. If x has the value 2 under lucky, then it follows that x has the value 4 under white.
+1. Upon satisfying the relationship where x dominates y, the value of x's contractual attribute is set to the value of y's contractual attribute plus 2.
+2. Within x, if the value 3 is assigned to the lucky field, then the opening field is also set to 3.
+3. If the value of the contractual field for x is 3, then the value 2 is assigned to the opening field for x.
+4. If x has the value 1 for the lucky attribute, then x is described as having the value 3 for the white attribute.
+5. If the relationship 'decrease' is established between x and y, then within x, the lucky attribute is set to twice the value of y's lucky attribute plus 2.
+Assertion:
+Margareta's lucky is greater than 3.36.
+Step reasoning:
+Fact5 -> int0: Paulita is 4 lucky; Fact1 & Rule5 & int0 -> int1: Margareta is 2*4+2=10 lucky
+Answer:
+True
+
+Fact:
+0. Eloisa rectifies Tiffani.
+1. Tiffani and Eloisa have a relationship characterized by buck.
+2. Valli and Eloisa maintain a relationship described by buck.
+3. Eloisa buckles Julianna.
+4. In the mean context, Eloisa is marked with the value 2.
+5. The relationship rectify exists between Julianna and Tiffani.
+Rule:
+0. If for x, the value 2 represents trying, then it can be inferred that the value 2 also marks the ample field of x.
+1. If \( x \) has the value 3 for the attribute "trying," then \( x \) also has the value 3 for the attribute "territorial."
+2. Given the relationship 'forgive' between x and y, within x, the value for ample is the value of y's ample attribute plus 3.
+3. When x has the value 4 in the ample context, it is then described as having the value 2 in the mean context.
+4. Whenever the relationship "buck" holds between x and y, the value of trying for x is documented as twice the trying value of y plus one.
+5. If the value 3 is assigned to x under the mean attribute, then it follows that x will have the value 2 under the territorial attribute.
+Assertion:
+Eloisa's trying is less than 2.72.
+Step reasoning:
+Default -> int0: Julianna is 0 trying; Fact3 & Rule4 & int0 -> int1: Eloisa is 2*0+1=1 trying
+Answer:
+True
+
+Fact:
+0. The relationship liquidate establishes a connection between Nolie and Helaine.
+1. Regina and Helaine have a relationship described by fabricate.
+2. Regina fabricates something involving Nolie.
+3. Quinta and Helaine have a relationship described by liquidate.
+4. The relationship liquidate exists between Regina and Quinta.
+5. The relationship pull defines a connection between Helaine and Quinta.
+Rule:
+0. If the value of successive for x is 3, then it inevitably follows that the value of responsible for x is 2.
+1. If x has the value 4 in the successive context, then the value of fourth for x is set to 1.
+2. Whenever x is described as having the value 3 under the spare attribute, x is then documented as having the value 4 under the fourth attribute.
+3. If the relationship `liquidate` between `x` and `y` is fulfilled, then the value of the fourth field for `x` is determined to be 2 times the value of the fourth field of `y` plus 4.
+4. When the relationship 'pull' holds between x and y, the value of x in the responsible field is determined by appending 3 to the value of y's responsible field.
+5. If x has the value 1 for responsible, then the value 2 is associated with x in the fourth context.
+Assertion:
+Quinta's fourth is less than 3.12.
+Step reasoning:
+Default -> int0: Helaine is 0 fourth; Fact3 & Rule3 & int0 -> int1: Quinta is 2*0+4=4 fourth
+Answer:
+False
+
+Fact:
+0. Slade and Marena engage in a relationship described by juggle.
+1. In the unnamed context, Trudi is assigned the value 1.
+2. For the unnamed attribute, Marena is assigned the value 2.
+3. Marena and Sarene engage in a relationship described by juggle.
+4. In the weakening context, Sarene is described by the value 1.
+5. Trudi's weakening characteristic is assigned the value 1.
+Rule:
+0. If the value of saudi for x is 3, then the value of unnamed for x is 4.
+1. Whenever x is documented with the value 3 for weakening, it follows that x is marked with the value 4 for saudi.
+2. If the indefinite field of x is associated with the value 1, then in the saudi context, x naturally holds the value 2.
+3. When the relationship 'create' holds between x and y, the value of x's saudi attribute is determined by adding 4 to the saudi attribute of y.
+4. If x has the value 2 in the unnamed context, then it follows that the weakening field of x is characterized by 3.
+5. For x, if the indefinite property is manifested with a value of 2, then the value 4 is assigned to the saudi property.
+Assertion:
+Marena's weakening is greater than 3.57.
+Step reasoning:
+Fact2 -> int0: Marena is 2 unnamed; Rule4 & int0 -> int1: Marena is 3 weakening
+Answer:
+False
+

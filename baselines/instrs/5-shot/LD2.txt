@@ -1,0 +1,105 @@
+Fact:
+0. Daveen fabricates something related to Josee.
+1. Orson steals from Daveen.
+2. The relationship fabricate connects Demetre and Orson.
+3. It can be said that Orson fabricates Daveen.
+4. Demetre rebukes Daveen.
+5. Demetre rebukes Orson.
+Rule:
+0. If the action fabricate is performed by x on y, then the value in x's premium field is determined by multiplying y's premium value by 4 and adding 7.
+1. If the relationship fabricate holds between x and y, then the value of x in the wide context is determined by multiplying y's wide value by 5 and then adding 10.
+2. If X's width is annotated as 1, then X's premium is assigned the value 4.
+3. If the relationship `fabricate` is established between x and y, then within x, the `risky` attribute is set to a value obtained by multiplying y's `risky` attribute by 5 and then adding 7.
+4. If \( x \) is assigned the value 1 in the raised context, then \( x \) is also assigned the value 1 in the risky context.
+5. Whenever the value of premium for x is 3, it follows that x is also recorded with 3 under the wide context.
+Assertion:
+Orson's wide is greater than 21.62.
+Step reasoning:
+Default -> int0: Josee is 0 wide; Fact0 & Rule1 & int0 -> int1: Daveen is 5*0+10=10 wide; Fact3 & Rule1 & int1 -> int2: Orson is 5*10+10=60 wide
+Answer:
+True
+
+Fact:
+0. Dareen and Saundra maintain a connection defined by celebrate.
+1. In the context of serve, Hamish serves Dareen.
+2. The relationship celebrate connects Saundra and Hamish.
+3. Vivien ratifies Saundra.
+4. In the context of ratify, Hamish and Dareen are connected.
+5. Saundra ratifies Hamish.
+Rule:
+0. If the any attribute of x is marked with 1, then under the threatening context, x is also marked with 1.
+1. If the relationship `ratify` holds between x and y, then the value of x's `any` attribute is determined by multiplying y's `any` value by 8 and adding 6.
+2. Under the wholesale context, if x is associated with the value 2, then the threatening property for x is defined as 3.
+3. If x is identified as any with a value of 4, then it can be inferred that x is attributed the value 1 in the wholesale context.
+4. Once the wholesale attribute of x is set to 1, then the european attribute of x is recorded as 2.
+5. If \( x \) has the value 2 for the any attribute, then within \( x \), the threatening attribute is also logged as 2.
+Assertion:
+Saundra's any is less than 11.0.
+Step reasoning:
+Default -> int0: Dareen is 0 any; Fact4 & Rule1 & int0 -> int1: Hamish is 8*0+6=6 any; Fact5 & Rule1 & int1 -> int2: Saundra is 8*6+6=54 any
+Answer:
+False
+
+Fact:
+0. Shaughn and Warner have a relationship characterized by slow.
+1. Dyana is assigned the value 3 in the colonial context.
+2. Dyana surprises Cherlyn.
+3. Warner replicates Cherlyn.
+4. In the context of slow, Dyana and Shaughn have a connection.
+5. The slow correlation exists between Cherlyn and Dyana.
+Rule:
+0. If the relationship `slow` between x and y is true, then within x, the attribute baltic is assigned a value calculated by multiplying y's baltic value by 1 and adding 3.
+1. Whenever x has the value 2 in the supreme attribute, it follows that x also manifests the value 2 in the colonial attribute.
+2. Whenever the value 3 is assigned to x for the changed property, x is marked with 2 in the baltic context.
+3. If the relationship "slow" holds between x and y, then x is assigned a value in the supreme attribute by multiplying y's supreme attribute by 4 and then adding 8.
+4. If the relationship "replicate" holds between x and y, then x's "changed" attribute is set to a value obtained by multiplying y's "changed" attribute by 6 and then adding 3.
+5. If x has the value 4 in the supreme context, then x is assigned the value 2 in the baltic context.
+Assertion:
+Warner's baltic is less than 18.58.
+Step reasoning:
+Default -> int0: Cherlyn is 0 changed; Fact3 & Rule4 & int0 -> int1: Warner is 6*0+3=3 changed; Rule2 & int1 -> int2: Warner is 2 baltic
+Answer:
+True
+
+Fact:
+0. In the context of withhold, Anurag and Alison have a connection.
+1. Anurag spooks Isador.
+2. The spook link is observed between Alison and Anurag.
+3. The relationship 'withhold' defines the relationship between Rosalind and Anurag.
+4. Anurag's headline is Isador.
+5. Rosalind spooks Alison.
+Rule:
+0. If the relationship spook holds between x and y, then within x, the seasonal attribute is set to a value obtained by multiplying y's seasonal value by 2 and adding 4.
+1. If the spook relationship holds between x and y, then the value of x in the accumulated property is set to 10 times the value of y plus 5.
+2. Under the multilateral context, if x is represented by 4, then x is also associated with the value 1 in the attempted context.
+3. If the value of multilateral for x is 2, then the value of attempted for x is also 2.
+4. Under the multilateral context, x is recorded with 3, which directly results from x being recorded with 1 in the accumulated context.
+5. If the relationship 'headline' connects x and y, then the value of x in the multilateral attribute is determined by multiplying the value of y's multilateral attribute by 9 and then adding 6.
+Assertion:
+Alison's seasonal is greater than 14.44.
+Step reasoning:
+Default -> int0: Isador is 0 seasonal; Fact1 & Rule0 & int0 -> int1: Anurag is 2*0+4=4 seasonal; Fact2 & Rule0 & int1 -> int2: Alison is 2*4+4=12 seasonal
+Answer:
+False
+
+Fact:
+0. The relationship 'hold' defines a connection between Kalil and Juditha.
+1. Kalil holds Yankee.
+2. Kalil and Yankee have a return relationship.
+3. Anita and Kalil share a relationship denoted by hold.
+4. There is a relation underlie between Anita and Kalil.
+5. The relationship 'return' defines a connection between Yankee and Juditha.
+Rule:
+0. If x is marked with 1 in the serious context, then x is recorded with 3 in the inflationary context.
+1. If the return relationship is observed between x and y, then the value of x's optional attribute is set to twice the value of y's optional attribute plus 10.
+2. If the underlie relationship between x and y is met, then the value of failing for x is determined by multiplying the failing value of y by 7 and then adding 3.
+3. For x, if the value 3 is attributed to x in the failing context, then the value 1 is assigned to x in the optional context.
+4. When the return relationship between x and y is established, then in the serious context, x is assigned a value derived by multiplying y's serious attribute by 5 and then adding 10.
+5. If the relationship return is established between x and y, then the value of x in the inflationary context is determined by multiplying y's inflationary attribute by 5 and adding 9.
+Assertion:
+Kalil's optional is greater than 21.72.
+Step reasoning:
+Default -> int0: Juditha is 0 optional; Fact5 & Rule1 & int0 -> int1: Yankee is 2*0+10=10 optional; Fact2 & Rule1 & int1 -> int2: Kalil is 2*10+10=30 optional
+Answer:
+True
+

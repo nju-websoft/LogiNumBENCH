@@ -1,0 +1,125 @@
+Fact:
+0. Dirk reminds Franni.
+1. Franni approves of Tabbi.
+2. Under the relationship fire, Franni is related to Dirk.
+3. Tabbi reminds Dirk.
+4. Dirk focuses on Anatoly.
+5. The relationship focus exists between Roz and Franni.
+6. Franni focuses on Anatoly.
+7. The determination of Franni is recorded with the value 1.
+Rule:
+0. For x, if the content property is marked with the value 2, then the waste property is documented with the value 4.
+1. Given that x is described as having the value 4 under the waste attribute, it is also indicated that x has the value 4 under the frozen attribute.
+2. When the relationship "remind" is fulfilled between x and y, the value of x in the frozen attribute is set to 1 times the value of y's frozen attribute plus 4.
+3. If the outboard field of x is characterized by 4, then x is identified with the value 2 under the heavy category.
+4. If the relationship 'recognize' holds between x and y, then the value in x's determined field is set by doubling y's determined value and adding 3.
+5. Under the relationship "approve," if the interaction between x and y is fulfilled, then for x, the content field takes on a value equal to the value of y's content field plus 2.
+6. If x has the value 3 for content, then it follows that the heavy property of x is labeled as 2.
+7. If the value of determined for x is 2, then the value of content for x is also 2.
+Assertion:
+Tabbi's frozen is greater than 3.66.
+Step reasoning:
+Default -> int0: Tabbi is 0 content; Fact1 & Rule5 & int0 -> int1: Franni is 0+2=2 content; Rule0 & int1 -> int2: Franni is 4 waste; Rule1 & int2 -> int3: Franni is 4 frozen; Fact0 & Rule2 & int3 -> int4: Dirk is 4+4=8 frozen; Fact3 & Rule2 & int4 -> int5: Tabbi is 8+4=12 frozen
+Answer:
+True
+
+Fact:
+0. A direct association is observed between Myrtia and Hamlen.
+1. Under the relationship bend, Myrtia is related to Hamlen.
+2. The relationship direct exists between Hamlen and Udall.
+3. Apostolos and Myrtia are connected through the bend relationship.
+4. Hamlen hears from Udall.
+5. For Udall, the value 4 is associated with attempted.
+6. Apostolos hears Hamlen.
+7. The relationship direct exists between Apostolos and Hamlen.
+Rule:
+0. If x is marked with the value 1 in the cubic context, then the junior attribute is set to 3.
+1. If x has the value 1 in the objective context, then x also has the value 1 in the professional context.
+2. If the relationship "contain" holds between x and y, then the value of x's cubic attribute is determined by multiplying y's cubic attribute by 1 and adding 2.
+3. When the relationship "hear" connects x and y, the value of x in the cubic context is determined by adding 1 to the cubic attribute of y.
+4. If the relation 'hear' holds between x and y, then the value of x in the optimistic context is determined by scaling the optimistic value of y by 2 and adding 3.
+5. If x is designated as junior with the value 3, then x is also designated as professional with the value 3.
+6. Whenever the bend relationship is observed between x and y, the value of x's professional attribute is determined by adding 3 to the professional attribute of y.
+7. If the value of attempted for x is 4, then the optimistic field for x is recorded as 4.
+Assertion:
+Apostolos's professional is greater than 3.43.
+Step reasoning:
+Default -> int0: Udall is 0 cubic; Fact4 & Rule3 & int0 -> int1: Hamlen is 0+1=1 cubic; Rule0 & int1 -> int2: Hamlen is 3 junior; Rule5 & int2 -> int3: Hamlen is 3 professional; Fact1 & Rule6 & int3 -> int4: Myrtia is 3+3=6 professional; Fact3 & Rule6 & int4 -> int5: Apostolos is 6+3=9 professional
+Answer:
+True
+
+Fact:
+0. Janie prevents Nannette.
+1. Nick and Quintana maintain a relationship where Nick hears Quintana.
+2. In Nannette, the value southeast is recorded as 1.
+3. The relationship prevent exists between Quintana and Janie.
+4. The relationship determine establishes a connection between Quintana and Nick.
+5. Janie's opposing value is recorded as 2.
+6. Wenonah and Quintana have a development relationship.
+7. Janie and Quintana are connected through a relationship described by determine.
+Rule:
+0. Whenever the relationship "hear" connects x and y, x is assigned a value in the residential category that is 3 more than the value of y's residential attribute.
+1. Under the steep context, x is assigned a value of 1 plus y whenever x and y share a relationship denoted by develop.
+2. Whenever the value of residential for x is 3, it follows that in the southeast context, x holds the value 2.
+3. If the value of steep for x is 2, then haggard is also registered as 2 for x.
+4. If x has the value 2 under the southeast category, then x is characterized by the value 3 in the steep field.
+5. If the haggard field of x is assigned the value 4, then it can be inferred that the opposing field of x is also assigned the value 4.
+6. If the value of haggard for x is 3, then x is attributed the value 4 in the leading category.
+7. Given that x prevents y, the value of the residential attribute for x is logged as the value associated with the residential attribute of y, plus 1.
+Assertion:
+Nick's steep is greater than 5.59.
+Step reasoning:
+Default -> int0: Nannette is 0 residential; Fact0 & Rule7 & int0 -> int1: Janie is 0+1=1 residential; Fact3 & Rule7 & int1 -> int2: Quintana is 1+1=2 residential; Fact1 & Rule0 & int2 -> int3: Nick is 2+3=5 residential; Rule2 & int3 -> int4: Nick is 2 southeast; Rule4 & int4 -> int5: Nick is 3 steep
+Answer:
+False
+
+Fact:
+0. Sadella ousts Gershon.
+1. For Benedict, the value 1 is associated with the pursuing attribute.
+2. Sheff and Alexis maintain a connection defined by contact.
+3. Sadella prepares Gershon.
+4. Sadella is assigned the value 3 for the attribute considerable.
+5. Benedict waives Sadella.
+6. Sadella ousts Benedict.
+7. Alexis and Benedict maintain a contact relationship.
+Rule:
+0. If the relationship contact holds between x and y, then within x, the value of the sold attribute is determined by adding 4 to the value of the sold attribute of y.
+1. If x has the value 1 for pursuing, then it can be inferred that x has the value 4 for considerable.
+2. For x, if the sold attribute is marked with 4, then the considerable attribute is marked with 1.
+3. If the corresponding attribute of x is set to 3, then the value of x in the pursuing attribute naturally becomes 2.
+4. Whenever the relationship "prepare" holds between x and y, it follows that within x, the value in the pursuing field is set to the attribute pursuing of y plus 2.
+5. If the contact between x and y is established, then in the kept context, x is recorded with a value obtained by multiplying y's kept value by 2 and adding 4.
+6. If the relationship contact holds between x and y, then the value in x's corresponding field is determined by doubling the value of y's corresponding attribute and adding 3.
+7. If the attribute considerable of x is assigned the value 4, then x is also assigned the value 4 in the context of corresponding.
+Assertion:
+Sheff's pursuing is less than 4.91.
+Step reasoning:
+Fact1 -> int0: Benedict is 1 pursuing; Rule1 & int0 -> int1: Benedict is 4 considerable; Rule7 & int1 -> int2: Benedict is 4 corresponding; Fact7 & Rule6 & int2 -> int3: Alexis is 2*4+3=11 corresponding; Fact2 & Rule6 & int3 -> int4: Sheff is 2*11+3=25 corresponding; Rule3 & int4 -> int5: Sheff is 2 pursuing
+Answer:
+True
+
+Fact:
+0. Cherey suggests Joannes.
+1. Charlena and Cherey maintain a connection defined by show.
+2. For Woody, the value 3 represents super.
+3. Woody demands from or of Charlena.
+4. The receive link is observed between Woody and Charlena.
+5. The relationship receive holds between Woody and Adara.
+6. Cherey mollifies Adara.
+7. Joannes shows Charlena.
+Rule:
+0. If the action suggest is performed by x and involves y, then the value of x's earned attribute is determined by doubling the value of y's earned attribute and adding 1.
+1. For x, if the value 4 is associated with the orange property, then the super field is assigned the value 2.
+2. If the value of the super field for x is 2, then the value 3 is recorded for x in the earned field.
+3. When x is described as having the value 2 for the orange attribute, then the value 4 is associated with x in the structured context.
+4. Under the super category, the value for x is determined by adding 1 to the super value of y, which can be inferred from the suggest association between x and y.
+5. If the relationship 'show' is fulfilled between x and y, then the value of x in the orange attribute is documented as 1 times the value of y's orange attribute plus 4.
+6. Whenever x is designated with the value 1 in the super context, it follows that x also holds the value 1 in the orange context.
+7. If the value of x in the super context is 4, then it logically follows that the value of x in the earned context is 1.
+Assertion:
+Charlena's earned is less than 4.08.
+Step reasoning:
+Default -> int0: Joannes is 0 super; Fact0 & Rule4 & int0 -> int1: Cherey is 0+1=1 super; Rule6 & int1 -> int2: Cherey is 1 orange; Fact1 & Rule5 & int2 -> int3: Charlena is 1+4=5 orange; Rule1 & int3 -> int4: Charlena is 2 super; Rule2 & int4 -> int5: Charlena is 3 earned
+Answer:
+True
+

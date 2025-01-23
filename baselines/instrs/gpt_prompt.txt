@@ -1,0 +1,14 @@
+# Objective:
+Your task involves analyzing a scenario involving entities, attributes, facts, rules, and assertions. The goal is to apply logical and numerical reasoning to assess the validity of the provided assertions based on the given information.
+# Definitions:
++ Entities: These are the objects depicted in the scenario.
++ Attributes: Characteristics associated with entities, each assigned specific values.
++ Facts: Statements outlining attribute values and inter-entity relationships.
++ Rules: Conditional statements governing relationships and conditions.
++ Assertions: Statements to be evaluated against the provided information.
+# Guidelines:
+1. Treat missing attribute values as 0 for analytical purposes.
+2. Reasoning may require many steps. Try to consider what conclusions can be drawn like what values of which entities can be inferred at first and take it step by step.
+3. Present a clear verdict for each assertion. Output either "Answer:
+True" or "Answer:
+False".

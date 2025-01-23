@@ -1,0 +1,105 @@
+Fact:
+0. Kristel sees Briana.
+1. Kristel achieves Agnese.
+2. Kristel and Vinnie maintain a connection defined by achieve.
+3. Under the relationship see, Briana sees Vinnie.
+4. Kristel sees Vinnie.
+5. Agnese and Kristel have a relationship denoted by champion.
+Rule:
+0. If x has the value 2 for responsible, then x naturally has the value 3 for motor.
+1. If the value 4 is associated with x in the context of changing, then x is also associated with the value 1 in the context of responsible.
+2. If the motor attribute of x is marked with 1, then the changing attribute of x is marked with 3.
+3. If the champion relationship between x and y is established, then for x, the value of responsible is set to 2 times the value of y's responsible attribute plus 2.
+4. If the value of material for x is 2, then the value of motor for x is 3.
+5. If the material of x is 4, then the responsible field of x is marked as 1.
+Assertion:
+Agnese's motor is greater than 2.29.
+Step reasoning:
+Default -> int0: Kristel is 0 responsible; Fact5 & Rule3 & int0 -> int1: Agnese is 2*0+2=2 responsible; Rule0 & int1 -> int2: Agnese is 3 motor
+Answer:
+True
+
+Fact:
+0. Giorgi broadcasts to Kathleen.
+1. Dennie outpaces Georgy.
+2. In the basic category, Georgy is characterized by the value 1.
+3. Giorgi obtains something from Kathleen.
+4. Georgy broadcasts to Dennie.
+5. Giorgi outpaces Dennie.
+Rule:
+0. When the relationship outpace holds between x and y, then the value of stiff for x is incremented by 1 based on y's value.
+1. If the value 2 is assigned to x in the stiff context, then x is also assigned the value 2 in the jobless context.
+2. If x is marked as jobless with the value 1, then it inevitably follows that the value of x's basic attribute is 4.
+3. If the relationship "outpaces" holds between x and y, then in the basic field for x, the value is set to the value of basic for y plus 1.
+4. If x has the value 1 for being independent, then it follows that the value 2 will be associated with x in the jobless context.
+5. If the relationship "outpaces" between x and y is met, then in the independent context, x is assigned a value that is 1 times the value of y's independent attribute plus 3.
+Assertion:
+Giorgi's stiff is greater than 4.76.
+Step reasoning:
+Default -> int0: Georgy is 0 stiff; Fact1 & Rule0 & int0 -> int1: Dennie is 0+1=1 stiff; Fact5 & Rule0 & int1 -> int2: Giorgi is 1+1=2 stiff
+Answer:
+False
+
+Fact:
+0. Vittoria bribes Chrissie.
+1. Mayda bribes Vittoria.
+2. Under the relationship finance, Vittoria is related to Mayda.
+3. Chrissie oversees Frank.
+4. Frank oversees Vittoria.
+5. The relationship 'oversee' defines a connection between Frank and Mayda.
+Rule:
+0. If the value of x in the intervening context is 4, then x is assigned the value 2 in the merged context.
+1. If the value 3 is associated with x in the social context, then the value 4 is assigned to x in the merged context.
+2. When x is characterized by the value 1 in the intervening context, it necessarily follows that x is attributed the value 4 in the unhappy context.
+3. If x has the value 2 for merged, then x is described as having the value 1 for unhappy.
+4. When the relationship "finance" is satisfied between x and y, the value of x's intervening attribute is set to twice the value of y's intervening attribute plus 3.
+5. Whenever x bribes y, in x, the merged attribute is assigned a value that is twice the value of y's merged attribute plus 2.
+Assertion:
+Mayda's merged is greater than 4.26.
+Step reasoning:
+Default -> int0: Chrissie is 0 merged; Fact0 & Rule5 & int0 -> int1: Vittoria is 2*0+2=2 merged; Fact1 & Rule5 & int1 -> int2: Mayda is 2*2+2=6 merged
+Answer:
+True
+
+Fact:
+0. In the belgian context, Timotheus is assigned the value 1.
+1. The duck association is observed between Harriett and Tucker.
+2. Tucker and Eddie have a relationship described by duck.
+3. Tucker and Timotheus have a relationship defined by lock.
+4. In the context of duck, Timotheus and Harriett are connected.
+5. In the fat context, Eddie is associated with the value 4.
+Rule:
+0. If x has the value 2 in the belgian context, then in the fat context, x is designated with the value 3.
+1. Under the accrued context, if x is registered with the value 3, then the fat characteristic of x is attributed the value 4.
+2. If x is recorded with the value 4 in the accrued context, then it follows that x will be assigned the value 2 for the fat attribute.
+3. If the relationship 'duck' holds between x and y, then within x, the accrued attribute is set to the value of 1 times y plus 4.
+4. If the relation 'underline' holds between x and y, then in the fat context, x is assigned a value equal to y's fat value plus 3.
+5. If the attribute belgian is set to 1 for x, then x is identified with the value 4 in the zambian category.
+Assertion:
+Harriett's accrued is less than 4.15.
+Step reasoning:
+Default -> int0: Eddie is 0 accrued; Fact2 & Rule3 & int0 -> int1: Tucker is 0+4=4 accrued; Fact1 & Rule3 & int1 -> int2: Harriett is 4+4=8 accrued
+Answer:
+False
+
+Fact:
+0. Marshall is in a state of instal with Bertie.
+1. Polly provides service to Marshall.
+2. Bertie and Marshall are associated through the pump action.
+3. Under the relationship pump, Marshall relates to Polly.
+4. Polly has the value 3 in the ccc property.
+5. The idle property for Correna is assigned the value 4.
+Rule:
+0. In the context of ccc, x is assigned the value 2 as a result of x being noted as having the value 4 in the fewer context.
+1. Within x, the idle attribute is set to the value of 1 times the idle property of y plus 2, which can be inferred from the service relationship between x and y.
+2. If the relationship `pump` holds between x and y, then in the context of `persian`, the value of x is determined by doubling the value of y's `persian` attribute and then adding 1.
+3. If the relationship instal holds between x and y, then the value of idle for x is determined by multiplying the value of idle for y by 2 and then adding 3.
+4. If the value of x's fewer attribute is 2, then the value 4 is associated with x's persian attribute.
+5. If the value of idle for x is 1, then the value of x under ccc is 2.
+Assertion:
+Polly's idle is less than 3.57.
+Step reasoning:
+Default -> int0: Bertie is 0 idle; Fact0 & Rule3 & int0 -> int1: Marshall is 2*0+3=3 idle; Fact1 & Rule1 & int1 -> int2: Polly is 3+2=5 idle
+Answer:
+False
+

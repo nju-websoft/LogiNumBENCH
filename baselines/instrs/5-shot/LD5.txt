@@ -1,0 +1,125 @@
+Fact:
+0. The measure link is observed between Erhard and Vlad.
+1. Felipa prosecutes Vlad.
+2. Vlad stops Wallace.
+3. Vlad measures Felipa.
+4. For Erhard, the value 1 indicates that specified is fulfilled.
+5. Felipa and Erhard have a land relationship.
+6. Vlad lands Erhard.
+7. The value of the fallen field for Chanderjit is 3.
+Rule:
+0. If the relationship "measure" holds between x and y, then the value of x in the "meet" context is determined by scaling y's "meet" value by 9 and adding 1.
+1. Under the conditioned context, if x is assigned the value 3, then the arco field for x is populated with the value 1.
+2. If the meet property of x is assigned a value of 1, then it can be inferred that the value 3 is stored in the conditioned field for x.
+3. If the relationship 'prosecute' holds between x and y, then the value of x's fallen field is determined by multiplying y's fallen property by 5 and adding 8.
+4. If the attribute conditioned for x holds the value 4, then the attribute fallen for x is recorded with the value 1.
+5. If x has the value 1 for arco, then it follows that x also has the value 1 for fallen.
+6. If x has the value 2 in the conditioned context, then it can be deduced that x has the value 4 in the arco context.
+7. If x has the value 3 in the arco field, then it is associated with the value 2 for the fallen attribute.
+Assertion:
+Felipa's fallen is greater than 16.13.
+Step reasoning:
+Default -> int0: Felipa is 0 meet; Fact3 & Rule0 & int0 -> int1: Vlad is 9*0+1=1 meet; Rule2 & int1 -> int2: Vlad is 3 conditioned; Rule1 & int2 -> int3: Vlad is 1 arco; Rule5 & int3 -> int4: Vlad is 1 fallen; Fact1 & Rule3 & int4 -> int5: Felipa is 5*1+8=13 fallen
+Answer:
+False
+
+Fact:
+0. Alisha emphasizes Josie.
+1. Jake mollifies Cara.
+2. Josie mollifies Alisha.
+3. Cara and Mirilla share a relationship denoted by mix.
+4. Alisha emphasizes Jake.
+5. The relationship mix exists between Alisha and Cara.
+6. Jake is assigned the value 4 in the stabilizing context.
+7. Mirilla and Josie maintain a relationship defined by swap.
+Rule:
+0. Whenever the relationship 'swap' holds between x and y, the value of x in the hundred context is determined by multiplying y's hundred value by 6 and then adding 6.
+1. If the attribute hundred is assigned the value 4 to x, then the global attribute for x is set to 3.
+2. When the complex property of x is assigned the value 2, then x is subsequently assigned the value 3 in the hundred property.
+3. Given the relationship characterized by "estimate" between x and y, the value of the mediterranean attribute for x is determined by multiplying y's mediterranean value by 10 and then adding 1.
+4. If the swap relationship between x and y is fulfilled, then the value of x's mediterranean attribute is determined by multiplying y's mediterranean attribute by 9 and adding 7.
+5. If the relationship "mollify" holds between x and y, then in the context of complex, x is assigned a value that is twice y's complex value plus 2.
+6. If the relationship 'swap' holds between x and y, then within x, the value of stabilizing is set to the result of adding 7 to the value of y's stabilizing attribute.
+7. If the relationship 'mix' between x and y is fulfilled, then in the complex context, x is assigned a value equal to 10 times the value of y's complex attribute plus 8.
+Assertion:
+Mirilla's hundred is less than 16.88.
+Step reasoning:
+Default -> int0: Mirilla is 0 complex; Fact3 & Rule7 & int0 -> int1: Cara is 10*0+8=8 complex; Fact5 & Rule7 & int1 -> int2: Alisha is 10*8+8=88 complex; Fact2 & Rule5 & int2 -> int3: Josie is 2*88+2=178 complex; Rule2 & int3 -> int4: Josie is 3 hundred; Fact7 & Rule0 & int4 -> int5: Mirilla is 6*3+6=24 hundred
+Answer:
+False
+
+Fact:
+0. Elsa submits to Brynne.
+1. Under the relationship lock, Quinn is related to Didi.
+2. A lock relationship is observed between Quinn and Brynne.
+3. Quinn distributes to Didi.
+4. The relationship lock describes the interaction between Elsa and Didi.
+5. Kameko submits to Quinn.
+6. The relationship lock exists between Brynne and Kameko.
+7. Didi locks Brynne.
+Rule:
+0. If the subject property of x is documented with 4, then the progressive property of x is marked with 1.
+1. If x has the value 3 in the progressive context, then it follows that x will have the value 4 in the modern context.
+2. Whenever the relationship "submit" is fulfilled between x and y, x is assigned a value in the leaded context by multiplying y's leaded attribute by 5 and then adding 1.
+3. If the modern characteristic of x is documented as 4, then the advised characteristic of x is documented as 1.
+4. If x is marked with the value 2 in the advised context, then it follows that x will be characterized by the value 1 in the progressive context.
+5. If \( x \) has the value 1 for the leaded attribute, then it naturally follows that \( x \) is recorded with the value 3 for the subject attribute.
+6. If x compiles y, then in the subject context, the value of x is determined by multiplying the subject attribute of y by 9 and then adding 10.
+7. If the value 3 is logged for x under the subject attribute, then x's progressive attribute is also set to 3.
+Assertion:
+Elsa's advised is greater than 18.38.
+Step reasoning:
+Default -> int0: Brynne is 0 leaded; Fact0 & Rule2 & int0 -> int1: Elsa is 5*0+1=1 leaded; Rule5 & int1 -> int2: Elsa is 3 subject; Rule7 & int2 -> int3: Elsa is 3 progressive; Rule1 & int3 -> int4: Elsa is 4 modern; Rule3 & int4 -> int5: Elsa is 1 advised
+Answer:
+False
+
+Fact:
+0. Marthe and Anya are connected through a reserve relationship.
+1. Lane is scrutinizing Judy.
+2. Marthe dislikes Judy.
+3. In the context of ration, Judy and Callie have a shared connection.
+4. Anya dislikes Judy.
+5. Under the relationship scrutinize, Anya relates to Lane.
+6. In the context of scrutinize, Judy and Marthe are connected.
+7. Callie and Anya maintain a relationship described by ration.
+Rule:
+0. If X has the value 3 in the unrealistic attribute, then X will have the value 2 in the unknown property.
+1. If the value of unrealistic for x is 2, then the value of attributable for x is also 2.
+2. If the unprofitable field of x is associated with the value 3, then x is described as having the value 2 under the net attribute.
+3. If the relationship 'scrutinize' holds between x and y, then in the net context, x is associated with a value calculated by multiplying y's net value by 5 and then adding 1.
+4. If the value of unknown for x is 3, then the value of net for x is directly set to 1.
+5. If the attribute unknown for x is defined as 2, then it can be inferred that the net attribute for x is defined as 4.
+6. If the relationship 'reserve' between x and y is fulfilled, then for x, the value of unknown is set by multiplying y's unknown value by 9 and then adding 3.
+7. When the unknown property of x is 1, then x is described as unrealistic with a value of 4.
+Assertion:
+Anya's net is greater than 13.14.
+Step reasoning:
+Default -> int0: Anya is 0 unknown; Fact0 & Rule6 & int0 -> int1: Marthe is 9*0+3=3 unknown; Rule4 & int1 -> int2: Marthe is 1 net; Fact6 & Rule3 & int2 -> int3: Judy is 5*1+1=6 net; Fact1 & Rule3 & int3 -> int4: Lane is 5*6+1=31 net; Fact5 & Rule3 & int4 -> int5: Anya is 5*31+1=156 net
+Answer:
+True
+
+Fact:
+0. Sonny and Tammara have a relationship defined by welcome.
+1. Darryl and Sonny are connected through an expunge relationship.
+2. For Alic, the value 3 is recorded in the disappointing attribute.
+3. In the context of screen, Darryl and Tammara are connected.
+4. Darryl and Tammara have a relationship characterized by correct.
+5. Alic and Darryl maintain a connection defined by screen.
+6. The relationship 'welcome' defines a connection between Tammara and Darryl.
+7. Darryl is in an expunge state concerning Alic.
+Rule:
+0. If \( x \) has the value 4 for the amalgamated property, then within \( x \), the arabian attribute is also marked as 4.
+1. If X is associated with the value 2 in the disappointing property, then it is expected that X will also be associated with the value 2 in the comparative property.
+2. Once the channel relationship between x and y is established, the value in x's arabian field is determined by multiplying y's arabian characteristic by 8 and then adding 7.
+3. Given that the value of the "given" field for x is 4, x then has the value 3 in the "comparative" context.
+4. If the value of the given field for x is 2, then x is also designated with the value 2 in the comparative context.
+5. If the relationship 'welcome' is established between x and y, then within x, the value of amalgamated is determined by adding 4 to the value of y's amalgamated attribute.
+6. If x is assigned the value 4 under the attribute arabian, then the value 2 is naturally recorded for x under the attribute disappointing.
+7. If the channel relationship between x and y is established, then the value of x's lay is determined by multiplying y's lay by 10 and then adding 10.
+Assertion:
+Sonny's comparative is greater than 22.03.
+Step reasoning:
+Default -> int0: Darryl is 0 amalgamated; Fact6 & Rule5 & int0 -> int1: Tammara is 0+4=4 amalgamated; Fact0 & Rule5 & int1 -> int2: Sonny is 4+4=8 amalgamated; Rule0 & int2 -> int3: Sonny is 4 arabian; Rule6 & int3 -> int4: Sonny is 2 disappointing; Rule1 & int4 -> int5: Sonny is 2 comparative
+Answer:
+False
+

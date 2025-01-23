@@ -1,0 +1,105 @@
+Fact:
+0. There is a relation screen between Annelise and Pearla.
+1. Ronald emphasizes Annelise.
+2. Under the relationship zip, Ede is related to Ronald.
+3. Ronald and Pearla maintain a relationship as described by screen.
+4. In the sharing context, Pearla is characterized by the value 3.
+5. It can be said that Ronald emphasizes Ede.
+Rule:
+0. If the screen relationship holds between x and y, then the value of x's sharing attribute is determined by multiplying y's sharing value by 3 and then adding 8.
+1. If the value 3 is associated with x in the brown context, then it can be inferred that the value 1 is associated with x for the concluded attribute.
+2. If the zip relationship between x and y is satisfied, then the value of x in the iranian field is determined by multiplying y's iranian value by 8 and then adding 5.
+3. If the relationship `screen` holds between x and y, then for x, the value of the brown attribute is determined by multiplying y's brown value by 7 and then adding 4.
+4. If the screen relationship between x and y is established, then in the concluded context, x is assigned a value calculated by multiplying y's concluded attribute by 3 and then adding 2.
+5. If x has the value 2 for the iranian property, then in x, the sharing attribute is assigned the value 3.
+Assertion:
+Annelise's brown is less than 6.53.
+Step reasoning:
+Default -> int0: Pearla is 0 brown; Fact0 & Rule3 & int0 -> int1: Annelise is 7*0+4=4 brown
+Answer:
+True
+
+Fact:
+0. Tobi and Winn have a relationship defined by sting.
+1. Tiphani stings Winn.
+2. Winn hampers Tiphani.
+3. The conflicting attribute of Tiphani is recorded with a value of 3.
+4. Winn and Tobi have a relationship described by vary.
+5. Marcelo and Winn have a relationship defined by hamper.
+Rule:
+0. If x has the value 2 for the conflicting property, then the ready field of x is also assigned the value 2.
+1. Whenever the value of x in the conflicting context is 3, then x is assigned the value 4 in the ready context.
+2. If the relationship `vary` holds between x and y, then the value of `conflicting` for x is determined by tripling the value of the `conflicting` attribute of y and adding 8.
+3. Given that x is characterized by 3 in the negative context, it follows that x possesses the value 4 in the ready context.
+4. For x, if the value 1 is assigned to ready, then the value 3 will be assigned to illegal.
+5. If the relationship `hamper` is observed between x and y, then within the illegal context, the value of x is determined by multiplying y's illegal value by 10 and then adding 9.
+Assertion:
+Tiphani's ready is less than 2.89.
+Step reasoning:
+Fact3 -> int0: Tiphani is 3 conflicting; Rule1 & int0 -> int1: Tiphani is 4 ready
+Answer:
+False
+
+Fact:
+0. The relationship 'redistribute' defines a connection between Jephthah and Katherina.
+1. Katherina redistributes with Janis.
+2. The relationship float describes the connection between Sergio and Jephthah.
+3. The float relationship is noted between Katherina and Janis.
+4. There exists a relationship float between Katherina and Sergio.
+5. The value 1 is associated with Katherina in the amended context.
+Rule:
+0. If X is recorded with 4 in the het context, then the higher field for X will be set to 3.
+1. In the amended context, the value associated with x is determined by adding 8 to the value of the amended characteristic of y, whenever the get relationship between x and y is fulfilled.
+2. If x is assigned the value 4 in the old field, then x is associated with the value 2 in the amended attribute.
+3. If x is associated with the value 1 in the het context, then it can be deduced that x is associated with the value 3 in the amended context.
+4. Given that x is associated with the value 4 in the higher context, the amended attribute of x is annotated with the value 3.
+5. If the action redistribute is performed between x and y, then x is described by augmenting y's het value by 4 within the het context.
+Assertion:
+Katherina's het is greater than 6.51.
+Step reasoning:
+Default -> int0: Janis is 0 het; Fact1 & Rule5 & int0 -> int1: Katherina is 0+4=4 het
+Answer:
+False
+
+Fact:
+0. There is a thumb association between Garnet and Carleen.
+1. Garnet sweetens Carleen.
+2. Dacy and Garnet maintain a relationship described by renew.
+3. Garnet renewes Carleen.
+4. Carmita sweetens Carleen.
+5. Garnet renews its state in relation to Carmita.
+Rule:
+0. The east property of x is assigned the value 1 if x is identified with 1 in the greatest context.
+1. If there is a relation 'thumb' between x and y, then the value of x's greatest property is determined by multiplying y's greatest property by 8 and then adding 7.
+2. If the value of 2 is assigned to x in the developed context, then the value of 3 is assigned to x in the korean context.
+3. If the relationship 'thumb' holds between x and y, then x is assigned a value in the developed category by multiplying y's value for developed by 3 and then adding 4.
+4. If the relationship `sweeten` is established between x and y, then the value of x's east attribute is determined by multiplying y's east attribute by 10 and adding 2.
+5. If the greatest property for x is depicted as 2, then x is documented with 4 under the developed category.
+Assertion:
+Carmita's east is less than 4.45.
+Step reasoning:
+Default -> int0: Carleen is 0 east; Fact4 & Rule4 & int0 -> int1: Carmita is 10*0+2=2 east
+Answer:
+True
+
+Fact:
+0. Melvyn pumps for Agatha.
+1. In the after context, Doria is assigned the value 2.
+2. The relationship wreck exists between Agatha and Libby.
+3. In the context of pumping, Doria and Agatha are connected.
+4. In the steady context, Melvyn is annotated with the value 1.
+5. Libby pumps for Melvyn.
+Rule:
+0. If the relationship 'wreck' holds between x and y, then in the context of enlarged, x is assigned a value equal to 8 times the value of y's enlarged attribute plus 9.
+1. If the relationship 'wreck' holds between x and y, then for x, the value of the 'after' attribute is determined by multiplying y's 'after' attribute by 8 and then adding 7.
+2. If the relationship 'wreck' holds between x and y, then the value of x's resistant attribute is determined by multiplying y's resistant value by 7 and adding 10.
+3. Given that the value of steady for x is 4, it can be inferred that under the context of enlarged, x is designated with the value 3.
+4. If the attribute enlarged for x is set to 4, then the attribute steady for x is annotated with the value 2.
+5. If the relationship "circulate" between x and y is fulfilled, then the value of x in the resistant category is determined by multiplying y's resistant value by 7 and then adding 3.
+Assertion:
+Agatha's after is greater than 4.41.
+Step reasoning:
+Default -> int0: Libby is 0 after; Fact2 & Rule1 & int0 -> int1: Agatha is 8*0+7=7 after
+Answer:
+True
+
