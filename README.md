@@ -90,7 +90,7 @@ You can add expression by modify the class `Expr` in [`LogiNumBench.py`](./src/L
 
 ## Step2: Refining the Natural Language Description
 
-You can use [fast.py](src/server/fast.py) to deploy a large language model (LLM) and [calllm.py](src/calllm.py) to request optimized natural language descriptions. This step leverages the power of an LLM to ensure that the generated text is both syntactically accurate and semantically coherent, making it suitable for both human interpretation and further processing by language models.
+You can use [fast.py](src/server/fast.py) to deploy a large language model (LLM) and [calllm.py](src/calllm.py) to request optimized natural language descriptions. This step leverages the power of an LLM to ensure that the generated text is both syntactically accurate and semantically coherent, making it suitable for human and language models.
 
 To run the optimization, start by deploying the server:
 
@@ -103,9 +103,6 @@ Then, request the optimized descriptions using the following command:
 ```shell
 python calllm.py
 ```
-
-This process enhances the clarity and quality of the generated natural language descriptions, ensuring they are easier to understand and process.
-
 
 
 ## Step3: Filling in Assertion Values Based on Statistical Analysis
