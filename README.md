@@ -1,12 +1,10 @@
-# LogiNumBench: Benchmarking Joint Logical and Numerical Reasoning over Natural Language
+# LogiNumBench: Synthesizing and Benchmarking Joint Logical and Numerical Reasoning over Natural Language
 
-This repository serves as a generator for the LogiNumBench benchmark. Pre-generated examples can be found at [`data`](./data). Below, you will find a brief introduction to help you generate your own data.
+This repository serves as a synthesizer for the LogiNumBench benchmark. Pre-synthesized examples can be found at [https://doi.org/10.5281/zenodo.14719812](https://doi.org/10.5281/zenodo.14719812). Below, you will find a brief introduction to help you generate your own data.
 
-## Quick Start
+## Step1: Synthesize a Sample with Template-based Natural Language Description 
 
-You can directly use [`demo.py`](./src/demo.py) for generation; you only need to control the parameters passed in. What's more, we provide [`js2disk.py`](./src/js2disk.py) to transform the json file to disk file for datasets library.
-
-To create your custom dataset, first load the template configuration file (you can also add your own), then use the `Theory` class. An instance of this class will automatically handle the sample generation process. Simply pass the desired parameters as follows:
+You can directly use [`demo.py`](./src/demo.py) for generation; you only need to control the parameters passed in. To create your custom dataset, first load the template and pool configuration file (you can also add your own), then use the `Theory` class. An instance of this class will automatically handle the sample generation process. Simply pass the desired parameters as follows:
 
 ```python
 from LogiNumBench import Theory, RandomGene
@@ -17,7 +15,7 @@ with open("config.json") as jsf:
     RandomGene.load_config(obj)
     
 while True:
-	theory = Theory(id,entityNum, attrNum, factNum, ruleNum, relationNum, depth)
+	theory = Theory(id, entityNum, attrNum, factNum, ruleNum, relationNum, depth)
     if theory.assertion is not None:
         break
 ```
@@ -39,7 +37,7 @@ the parameters we chose are listed below:
 | 5     | 5         | 6       | 8       | 8       | 5           |
 | 6     | 5         | 6       | 8       | 10      | 5           |
 
-## Different Formats
+### Output Formats for Synthesized Theory
 
 After generating a Theory instance, you can convert it into different forms. 
 
@@ -59,7 +57,7 @@ For example:
 
 
 
-## Insights
+### Understanding the Synthesized Samples
 
 In order to better understand the sample generated, even if `theory.assertion` is `None`, you can gain insights into this randomly generated sample through the following method. At the same time, you can also assess the reasonableness of certain parameter.
 
@@ -81,120 +79,95 @@ In order to better understand the sample generated, even if `theory.assertion` i
 
 Now you can easily obtain any information about this sample!
 
-## Add Expression You Want
+### Extending the theory with custom expressions
 
 You can add expression by modify the class `Expr` in [`LogiNumBench.py`](./src/LogiNumBench.py).
 
 1. change the `__init__` to generate your mode
 2. complete `compute`,`__str__`, `nl`, `expression_str` functions as the linear operation we have finished 
 
-## Change Assertion Value
 
-If you want to change the assertion value generated, you can just change the code `'num': RandomGene.geneFromInterval(1, 100)` at class `Assertion`.
+
+## Step2: Refining the Natural Language Description
+
+You can use [fast.py](src/server/fast.py) to deploy a large language model (LLM) and [calllm.py](src/calllm.py) to request optimized natural language descriptions. This step leverages the power of an LLM to ensure that the generated text is both syntactically accurate and semantically coherent, making it suitable for both human interpretation and further processing by language models.
+
+To run the optimization, start by deploying the server:
+
+```shell
+uvicorn fast:app --reload --port 8080
+```
+
+Then, request the optimized descriptions using the following command:
+
+```shell
+python calllm.py
+```
+
+This process enhances the clarity and quality of the generated natural language descriptions, ensuring they are easier to understand and process.
+
+
+
+## Step3: Filling in Assertion Values Based on Statistical Analysis
+
+We derived the assertion values by analyzing the distribution of values from 24,000 generated samples. By calculating the median and distribution, we selected appropriate parameters for the normal distribution—mean ($\mu$) and standard deviation ($\sigma$). We adjusted the standard deviation so that the range $\mu \pm 3\sigma$ would cover the broadest possible values, while ensuring that no sampled values would fall below zero. Additionally, we set a constraint that all final assertion values must be greater than or equal to 1. This process ensures that assertion values are both statistically grounded and meet the necessary constraints for valid data generation.
+
+To do the above, use [modify_assertion_values.py](src/modify_assertion_values.py).
+
+
+
+## The Process of Configuring for Sample Synthesis
+
+We collected an entity pool of 7,944 items from `nltk.corpus.names`, an attribute pool of 1,366 items from `nltk.corpus.treebank`, and a relationship pool of 976 items from `nltk.corpus.wordnet`. These resources are sourced from the Natural Language Toolkit (NLTK), a widely-used library in natural language processing. During the synthesis process, these pools are partitioned across the training, development, and test sets, as shown in the table below.
+
+| **Data split** | **Entity pool** | **Attribute pool** | **Relationship pool** |
+| -------------- | --------------- | ------------------ | --------------------- |
+| Train          | 6355            | 780                | 1092                  |
+| Dev            | 794             | 98                 | 137                   |
+| Test           | 795             | 98                 | 137                   |
+
+When entities ($\mathbf{E}$), attributes ($\mathbf{A}$), and relationships ($\mathbf{R}$) are selected from the predefined pools, we ensure that attributes and relationships are chosen without including synonyms. This precaution prevents unintended semantic influence, ensuring the integrity of the study's results.
+
+To obtain the pools for generating samples, we use [getPool.py](src/getPool.py) to gather the data, and [divide_config.py](src/divide_config.py) to split the pools into training, development, and test sets.
+
 
 ## Baselines
 
-The [`baselines`](./baselines)directory contains code for training and evaluating various model architectures. Detailed instructions are provided below.
+The [`baselines`](./baselines) directory contains code for training and evaluating various model architectures. Detailed instructions are provided below.
 
 ### Requirements
 
 - torch >= 2.0
 - transformers
-- zhipuai
 - openai
+- sklearn
+- datasets
+- pandas
+- numpy
 
-### Code
+### LLMs
 
-#### Encoder-Only Models
+To deploy your own LLMs, you can use [server.py](baselines/server.py) and [client.py](baselines/client.py).
 
-+ [encoder_only_train.py](./baselines/encoder_only/encoder_only_train.py)
-+ [encoder_only_eva.py](./baselines/encoder_only/encoder_only_eva.py)
+For calling external APIs with LLMs, use [do_normal_call.py](baselines/do_normal_call.py).
 
-The `encoder_only_train.py` file is used to train the decoder-only models. It trains 12 tasks at once, including D1-6 and LD1-6.
+The instructions and few-shot examples for LLM inputs are located in [instrs](baselines/instrs).
 
-The `encoder_only_eva.py` file is used to evaluate the decoder-only models. The parameters used are set within the file. The config file is used to provide the checkpoint file after training. The format is as follows:
+You can analyze the results from LLMs using [analyze_from_text.py](baselines/analyze_from_text.py).
 
-```json
-{
-    "albert_xlarge": 
-    {
-        "D1":
-        {
-            "output":22000,
-        },
-        "D2":
-        {
-            "output":14000
-        }
-    }
-}
-```
+### Encoder-Only Models
 
-It is recommended to modify the code to adapt to your specific file paths and environment settings. You can use command like the following :
+To fine-tune encoder-only models for the main experiment, use [encoder-only.py](baselines/encoder-only.py) along with the configuration in [baselines/configs/main-experiment](baselines/configs/main-experiment). For example:
 
 ```shell
-python encoder_only_train.py gpu=0 ckpt="the path of pre-trained model" dataFile=/"your path"/D{depth}/disk storeFile=/"your path"/D{depth} batchsz="batch size" lr="learning rate"
-python encoder_only_eva.py
+python encoder-only.py ./configs/main-experiment/albert-base-v2/D1.json
 ```
 
-#### Encoder-Decoder Models
+To do the cross-distribution experiments, use [cross-eval.py](baselines/cross-eval.py)
 
-+ [encoder_decoder_train.py](./baselines/encoder_decoder/encoder_decoder_train.py)
-+ [encoder_decoder_eva.py](./baselines/encoder_decoder/encoder_decoder_eva.py)
-
-Similar to the above, the `encoder_decoder_train.py` file is used to train the encoder-decoder models. It trains 12 tasks at once, including D1-6 and LD1-6.
-
-The `encoder_decoder_eva.py` file is used to evaluate the encoder-decoder models. The parameters used are set within the file. The config file is used to provide the checkpoint file after training. The format is as follows:
-
-```json
-{
-    "t5_base": {
-        "D1": 8000,
-        "D2": 8000,
-        "D3": 12000
-    }
-}
-```
-
-It is recommended to modify the code to adapt to your specific file paths and environment settings. You can use command like the following :
+To run pretraining experiments, use [PretrainingOnLogiNumBENCH.py](baselines/PretrainingOnLogiNumBENCH.py), and for fine-tuning experiments, use [FinetuneOnRuleTaker.py](baselines/FinetuneOnRuleTaker.py). These can be run as direct fine-tuning or fine-tuning after pretraining. The configurations we use for these experiments are located in [baselines/configs/pretraining](baselines/configs/pretraining). Example commands:
 
 ```shell
-python encoder_decoder_train.py gpu=0 ckpt="the path of pre-trained model" dataFile=/"your path"/D{depth}/disk storeFile=/"your path"/D{depth} batchsz="batch size" lr="learning rate"
-python encoder_decoder_eva.py
+python PretrainingOnLogiNumBENCH.py ./configs/pretraining/bert-base/pretrain.json
+python FinetuneOnRuleTaker.py ./configs/pretraining/bert-base/direct.json
 ```
-
-#### LLMs
-
-Please configure paths carefully in the files to suit your environment.
-
-+ **ChatGLM3**: To call the API, please refer to the official repository for instructions on running the server.
-  + [chatglm3.py](baselines/llms/chatglm3/chatglm3.py)
-  + [chatglm3_base.py](baselines/llms/chatglm3/chatglm3_base.py)
-+ **Llama2**: To call the API, please refer to the official repository for instructions on running the server.
-  + [llama2_chat.py](baselines/llms/llama2/llama2_chat.py)
-  + [llama2_text.py](baselines/llms/llama2/llama2_text.py)
-+ **Llama3**
-  + [llama3_it.py](baselines/llms/llama3/llama3_it.py)
-  + [llama3_base.py](baselines/llms/llama3/llama3_base.py)
-+ **Llama3.1**
-  + [llama3.1_it.py](baselines/llms/llama3.1/llama3.1_it.py)
-  + [llama3.1_base.py](baselines/llms/llama3.1/llama3.1_base.py)
-+ **Gemma**
-  + [gemma_it.py](baselines/llms/gemma/gemma_it.py)
-  + [gemma_base.py](baselines/llms/gemma/gemma_base.py)
-+ **Qwen1\.5**
-  + [qwen_base.py](baselines/llms/qwen/qwen_base.py)
-  + [qwen_chat.py](baselines/llms/qwen/qwen_chat.py)
-+ **Qwen2**
-  + [qwen2_base.py](baselines/llms/qwen2/qwen2_base.py)
-  + [qwen2_it.py](baselines/llms/qwen2/qwen2_it.py)
-
-+ **ChatGPT & GPT-4o**
-  + [chatgpt_call.py](baselines/llms/chatgpt/chatgpt_call.py)
-
-#### Pretraining
-
-+ [create_mix.py](baselines/pretrain/create_mix.py): The training set we used, with mixed depths, was collected from D1 to D5 for pre-training.
-+ [pretrain.py](baselines/pretrain/pretrain.py): Executes the pre-training.
-+ [RT_after_pretrain.py](baselines/pretrain/RT_after_pretrain.py): Fine-tunes on RuleTaker after pre-training.
-+ [train_on_RT.py](baselines/pretrain/train_on_RT.py): Directly fine-tunes on RuleTaker.

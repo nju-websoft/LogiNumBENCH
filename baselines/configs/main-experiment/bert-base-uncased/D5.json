@@ -1,0 +1,52 @@
+{
+    "ModelArguments": {
+        "model_name_or_path": "bert-base-uncased",
+        "config_name": "bert-base-uncased"
+    },
+    "DataTrainingArguments": {
+        "dataset_name": "D5",
+        "max_seq_length": 512,
+        "overwrite_cache": false,
+        "max_train_samples": null,
+        "max_eval_samples": null,
+        "max_predict_samples": null
+    },
+    "TrainingArguments": {
+        "output_dir": "./output/bert-base-uncased/D5_5e-06",
+        "overwrite_output_dir": true,
+        "do_train": true,
+        "do_eval": true,
+        "do_predict": true,
+        "eval_strategy": "steps",
+        "save_strategy": "steps",
+        "logging_strategy": "steps",
+        "logging_dir": "./logs",
+        "per_device_train_batch_size": 32,
+        "per_device_eval_batch_size": 32,
+        "gradient_accumulation_steps": 2,
+        "eval_accumulation_steps": 1,
+        "num_train_epochs": 100,
+        "max_steps": -1,
+        "learning_rate": 5e-06,
+        "logging_steps": 50,
+        "save_steps": 500,
+        "save_total_limit": 3,
+        "load_best_model_at_end": true,
+        "metric_for_best_model": "eval_loss",
+        "greater_is_better": false,
+        "early_stopping_patience": 10,
+        "early_stopping_threshold": 0.0001,
+        "seed": 42,
+        "dataloader_num_workers": 4,
+        "run_name": "bert-base-uncased_D5_5e-06",
+        "report_to": [
+            "tensorboard"
+        ],
+        "remove_unused_columns": true,
+        "label_smoothing_factor": 0.0,
+        "eval_steps": 500,
+        "save_on_each_node": false,
+        "logging_nan_inf_filter": true,
+        "weight_decay": 0
+    }
+}

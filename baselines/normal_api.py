@@ -71,13 +71,13 @@ def restart_from_outputfile(output_file):
         with open(output_file, "r", encoding='utf-8') as f:
             try:
                 existing_results = json.load(f)
-                print(f"已加载现有结果文件：{output_file}")
+                print(f"already load the existing results {output_file}")
             except json.JSONDecodeError:
-                print(f"结果文件 {output_file} 无法解析为有效的 JSON，将重新开始。")
+                print(f"existing result {output_file} can't be parsed, will start new processing.")
                 existing_results = {}
     else:
         existing_results = {}
-        print(f"结果文件 {output_file} 不存在，将开始新处理。")
+        print(f"existing result {output_file} doesn't exist, will start new processing.")
 
     dataids_to_process = {}
     skipped_datasets = []
@@ -88,16 +88,16 @@ def restart_from_outputfile(output_file):
                 skipped_datasets.append(dataset_name)
             else:
                 print(
-                    f"数据集 {dataset_name} 已存在但条目数不足 ({len(existing_results[dataset_name])}/{MAX_PROCESS_NUM})，将重新处理。")
+                    f"result for dataset {dataset_name} already exist but doesn't enough ({len(existing_results[dataset_name])}/{MAX_PROCESS_NUM}), will start new processing.")
                 dataids_to_process[dataset_name] = [str(i) for i in range(
                     MAX_PROCESS_NUM) if str(i) not in existing_results[dataset_name]]
         else:
             dataids_to_process[dataset_name] = [
                 str(i) for i in range(MAX_PROCESS_NUM)]
 
-    print(f"跳过已完成的数据集 ({len(skipped_datasets)}): {skipped_datasets}")
+    print(f"skip ({len(skipped_datasets)}): {skipped_datasets}")
     print(
-        f"需要处理的数据集 {json.dumps({key: len(value) for key, value in dataids_to_process.items()}, indent=4)}")
+        f"need to process {json.dumps({key: len(value) for key, value in dataids_to_process.items()}, indent=4)}")
     return existing_results, dataids_to_process
 
 
@@ -108,7 +108,7 @@ def normal_api_request(key, url, model, concurrence, zero_shot=True):
         output_file = f"results/{model}-few.raw.json"
     print(key, url, model, output_file)
     client = OpenAI(api_key=key, base_url=url)
-    instr = open(f"instrs/gpt_prompt.txt", "r").read()
+    instr = open(f"instrs/prompt.txt", "r").read()
 
     existing_results, dataids_to_process = restart_from_outputfile(output_file)
     datas_to_process = []

@@ -144,7 +144,6 @@ if __name__ == "__main__":
                             port=args.port, log_level="info")
     server = uvicorn.Server(config)
 
-    # 将服务器实例传递给 shutdown 函数
     app.state.server = server
 
     server.run()
