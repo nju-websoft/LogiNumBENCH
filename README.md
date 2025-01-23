@@ -162,7 +162,7 @@ python encoder-only.py ./configs/main-experiment/albert-base-v2/D1.json
 
 To do the cross-distribution experiments, use [cross-eval.py](baselines/cross-eval.py)
 
-To run pretraining experiments, use [PretrainingOnLogiNumBENCH.py](baselines/PretrainingOnLogiNumBENCH.py), and for fine-tuning experiments, use [FinetuneOnRuleTaker.py](baselines/FinetuneOnRuleTaker.py). These can be run as direct fine-tuning or fine-tuning after pretraining. The configurations we use for these experiments are located in [baselines/configs/pretraining](baselines/configs/pretraining). Example commands:
+To run the data augmentation experiments, use [PretrainingOnLogiNumBENCH.py](baselines/PretrainingOnLogiNumBENCH.py), and for fine-tuning experiments, use [FinetuneOnRuleTaker.py](baselines/FinetuneOnRuleTaker.py). These can be run as direct fine-tuning or fine-tuning after pretraining. The configurations we use for these experiments are located in [baselines/configs/pretraining](baselines/configs/pretraining). Example commands:
 
 ```shell
 python PretrainingOnLogiNumBENCH.py ./configs/pretraining/bert-base/pretrain.json
